@@ -8,65 +8,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Models/Photo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Models/Tag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/e2e/tsconfig.e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.server.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/fetch-data/fetch-data.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/fetch-data/fetch-data.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/nav-menu/nav-menu.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/nav-menu/nav-menu.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/nav-menu/nav-menu.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/tsconfig.server.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Context/PhotoFlickerContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhotoFlicker.sln" afterDir="false" />
+    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Dal/ConnectionStringManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Models/Photo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Models/Tag.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/IPhotoRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/PhotoRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ExtensionMethods/IServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Dal/PhotoFlicker.Dal.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Dal/PhotoFlicker.Dal.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/counter/counter.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/fetch-data/fetch-data.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/fetch-data/fetch-data.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Context/PhotoFlickerContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Context/PhotoFlickerContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016081517_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016081517_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/PhotoFlickerContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,18 +43,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PhotoFlicker.Dal/ConnectionStringManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Class1.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Dal/Class1.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Photo.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Tag.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Dal/Context/PhotFlickerContext.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Dal/Context/PhotoFlickerContext.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/appsettings.json" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Dal/Class1.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Dal/Context/PhotoFlickerContext.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Dal/ConnectionStringManager.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/Context/PhotoFlickerContext.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Db/Context/PhotoFlickerContext.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/IPageRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/PageRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ExtensionMethods/IServiceCollectionExtensions.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/IPhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/PhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.css" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Models/Photo.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Models/Tag.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo-service.service.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo.service.spec.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/tag.service.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/tag.service.spec.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo.service.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
       </list>
     </option>
   </component>
@@ -98,6 +87,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34997287" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30005425" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="/media/mikolaj/dyskGlowny/RiderProjects" />
@@ -108,6 +99,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PhotoFlicker.Web">
@@ -150,14 +142,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602833658827</updated>
-      <workItem from="1602833661339" duration="2626000" />
+      <workItem from="1602833661339" duration="3332000" />
+      <workItem from="1602837733171" duration="8666000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1602836435958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602836435958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -169,34 +170,109 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="743" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602835505899">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
     <state x="743" y="298" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602835505899" />
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom" timestamp="1602834642441">
+    <state width="1874" height="378" key="GridCell.Tab.0.bottom" timestamp="1602845301698">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602834642441" />
-    <state width="1874" height="284" key="GridCell.Tab.0.center" timestamp="1602834642441">
+    <state width="1874" height="378" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.0.center" timestamp="1602845301698">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602834642441" />
-    <state width="1874" height="284" key="GridCell.Tab.0.left" timestamp="1602834642440">
+    <state width="1874" height="378" key="GridCell.Tab.0.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.0.left" timestamp="1602845301698">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602834642440" />
-    <state width="1874" height="284" key="GridCell.Tab.0.right" timestamp="1602834642441">
+    <state width="1874" height="378" key="GridCell.Tab.0.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.0.right" timestamp="1602845301698">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state width="1874" height="284" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602834642441" />
-    <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1602833726729">
+    <state width="1874" height="378" key="GridCell.Tab.0.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.1.bottom" timestamp="1602845301699">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602833726729" />
+    <state width="1874" height="378" key="GridCell.Tab.1.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.1.center" timestamp="1602845301698">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.1.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.1.left" timestamp="1602845301698">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.1.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.1.right" timestamp="1602845301698">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.1.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301698" />
+    <state width="1874" height="378" key="GridCell.Tab.2.bottom" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.2.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.2.center" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.2.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.2.left" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.2.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.2.right" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.2.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.3.bottom" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.3.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.3.center" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.3.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.3.left" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.3.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.3.right" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.3.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.4.bottom" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.4.bottom/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.4.center" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.4.center/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.4.left" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.4.left/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state width="1874" height="378" key="GridCell.Tab.4.right" timestamp="1602845301699">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state width="1874" height="378" key="GridCell.Tab.4.right/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602845301699" />
+    <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size" timestamp="1602836756348">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602836756348" />
+    <state x="651" y="209" width="608" height="669" key="RiderGenerateDialog" timestamp="1602839462669">
+      <screen x="0" y="27" width="1920" height="1003" />
+    </state>
+    <state x="651" y="209" width="608" height="669" key="RiderGenerateDialog/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602839462669" />
+    <state x="1920" y="27" width="1384" height="1003" maximized="true" key="dock-window-1" timestamp="1602842237259">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1920" y="27" width="1384" height="1003" maximized="true" key="dock-window-1/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602842237259" />
   </component>
 </project>

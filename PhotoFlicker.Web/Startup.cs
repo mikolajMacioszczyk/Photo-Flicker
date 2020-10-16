@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PhotoFlickerContext = PhotoFlicker.Web.Context.PhotoFlickerContext;
+using PhotoFlicker.Web.Db.Context;
+using PhotoFlicker.Web.ExtensionMethods;
 
 namespace PhotoFlicker.Web
 {
@@ -27,6 +28,8 @@ namespace PhotoFlicker.Web
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
+
+            services.AddRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

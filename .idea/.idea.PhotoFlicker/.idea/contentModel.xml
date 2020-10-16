@@ -111,6 +111,57 @@
           <e p="node_modules/tslib" t="IncludeRecursive" />
           <e p="node_modules/tslint" t="IncludeRecursive" />
           <e p="node_modules/tsutils" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.dom.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.dom.iterable.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.collection.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.core.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.generator.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.promise.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2016.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2016.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.intl.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.object.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.string.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.intl.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.promise.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2018.regexp.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.array.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.object.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.string.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2020.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2020.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2020.string.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es5.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.es6.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.array.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.bigint.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.full.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.intl.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.esnext.symbol.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.scripthost.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.webworker.d.ts" t="IncludeRecursive" />
+          <e p="node_modules/typescript/lib/lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
           <e p="node_modules/uri-js" t="IncludeRecursive" />
           <e p="node_modules/webdriver-js-extender" t="IncludeRecursive" />
           <e p="node_modules/yn" t="IncludeRecursive" />
@@ -119,20 +170,22 @@
           <e p="package.json" t="Include" />
           <e p="src" t="Include">
             <e p="app" t="Include">
+              <e p="Models" t="Include">
+                <e p="Photo.ts" t="Include" />
+                <e p="Tag.ts" t="Include" />
+              </e>
+              <e p="Services" t="Include">
+                <e p="photo.service.spec.ts" t="Include" />
+                <e p="photo.service.ts" t="Include" />
+                <e p="tag.service.spec.ts" t="Include" />
+                <e p="tag.service.ts" t="Include" />
+              </e>
               <e p="app.component.html" t="Include" />
               <e p="app.component.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
               <e p="app.server.module.ts" t="Include" />
-              <e p="counter" t="Include">
-                <e p="counter.component.html" t="Include" />
-                <e p="counter.component.spec.ts" t="Include" />
-                <e p="counter.component.ts" t="Include" />
-              </e>
-              <e p="fetch-data" t="Include">
-                <e p="fetch-data.component.html" t="Include" />
-                <e p="fetch-data.component.ts" t="Include" />
-              </e>
               <e p="home" t="Include">
+                <e p="home.component.css" t="Include" />
                 <e p="home.component.html" t="Include" />
                 <e p="home.component.ts" t="Include" />
               </e>
@@ -140,6 +193,18 @@
                 <e p="nav-menu.component.css" t="Include" />
                 <e p="nav-menu.component.html" t="Include" />
                 <e p="nav-menu.component.ts" t="Include" />
+              </e>
+              <e p="not-found" t="Include">
+                <e p="not-found.component.css" t="Include" />
+                <e p="not-found.component.html" t="Include" />
+                <e p="not-found.component.spec.ts" t="Include" />
+                <e p="not-found.component.ts" t="Include" />
+              </e>
+              <e p="photo-slider" t="Include">
+                <e p="photo-slider.component.css" t="Include" />
+                <e p="photo-slider.component.html" t="Include" />
+                <e p="photo-slider.component.spec.ts" t="Include" />
+                <e p="photo-slider.component.ts" t="Include" />
               </e>
             </e>
             <e p="assets" t="Include">
@@ -163,13 +228,26 @@
           <e p="tsconfig.json" t="Include" />
           <e p="tslint.json" t="Include" />
         </e>
-        <e p="Context" t="Include">
-          <e p="PhotoFlickerContext.cs" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="PhotoController.cs" t="Include" />
         </e>
-        <e p="Controllers" t="Include" />
+        <e p="Db" t="Include">
+          <e p="Context" t="Include">
+            <e p="PhotoFlickerContext.cs" t="Include" />
+          </e>
+          <e p="Repository" t="Include">
+            <e p="Page" t="Include">
+              <e p="IPhotoRepository.cs" t="Include" />
+              <e p="PhotoRepository.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ExtensionMethods" t="Include">
+          <e p="IServiceCollectionExtensions.cs" t="Include" />
+        </e>
         <e p="Migrations" t="Include">
-          <e p="20201016081517_InitialMigration.Designer.cs" t="Include" />
-          <e p="20201016081517_InitialMigration.cs" t="Include" />
+          <e p="20201016085552_InitialMigration.Designer.cs" t="Include" />
+          <e p="20201016085552_InitialMigration.cs" t="Include" />
           <e p="PhotoFlickerContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Pages" t="Include">

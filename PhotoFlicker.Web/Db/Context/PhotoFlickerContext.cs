@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using PhotoFlicker.Models;
 
-namespace PhotoFlicker.Web.Context
+namespace PhotoFlicker.Web.Db.Context
 {
     public class PhotoFlickerContext : DbContext
     {
