@@ -26,18 +26,7 @@ namespace PhotoFlicker.Web.Controllers
             var data = await _repository.Take(amount);
             return Ok(data);
         }
-        
-        [HttpGet]
-        [Route("{photoId}/{amount}")]
-        public async Task<ActionResult<IEnumerable<Tag>>> TakeWherePhoto([FromRoute] int photoId, [FromRoute] int amount)
-        {
-            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może bym ujemna"); }
-            if (!(await _repository.IsPhotoExist(photoId))) {return BadRequest("Photo o tym id nie istnieje");}
 
-            var data = await _repository.TakeWherePhoto(photoId, amount);
-            return Ok(data);
-        }
-        
         [HttpGet]
         [Route("single/{name}")]
         public async Task<ActionResult<IEnumerable<Tag>>> GetByName([FromRoute] string name)

@@ -13,6 +13,7 @@ import {PhotoService} from "./Services/photo.service";
 import {TagService} from "./Services/tag.service";
 import { PhotoSliderComponent } from './photo-slider/photo-slider.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     PhotoSliderComponent,
     NotFoundComponent,
+    AllPhotosComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,6 +32,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'slider/:tag/:time', component: PhotoSliderComponent },
+      { path: 'photos', component: AllPhotosComponent },
       { path: '**', component: NotFoundComponent },
     ])
   ],

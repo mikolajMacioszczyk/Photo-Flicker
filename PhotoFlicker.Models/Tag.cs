@@ -10,6 +10,7 @@ namespace PhotoFlicker.Models
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
-        public IEnumerable<Photo> MarkedPhotos { get; set; }
+
+        public IEnumerable<Photo> Photos { get; set; }
     }
 }

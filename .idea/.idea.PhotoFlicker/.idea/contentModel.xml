@@ -3,6 +3,13 @@
   <component name="ContentModelStore">
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_PhotoFlicker.1549064749.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.4.0/build/netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="PhotoFlicker.Models" t="IncludeRecursive">
         <e p="Photo.cs" t="Include" />
@@ -13,6 +20,30 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
               <e p="PhotoFlicker.Models.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="PhotoFlicker.Tests" t="IncludeRecursive">
+        <e p="PhotoFlicker.Tests.csproj" t="IncludeRecursive" />
+        <e p="PhotoFlickerTestBase.cs" t="Include" />
+        <e p="RepositoryUnitTests" t="Include">
+          <e p="PhotoRepository" t="Include">
+            <e p="AddTagSuccessfully.cs" t="Include" />
+            <e p="AddTagWithoutModify.cs" t="Include" />
+            <e p="Create.cs" t="Include" />
+            <e p="Delete.cs" t="Include" />
+            <e p="Read.cs" t="Include" />
+          </e>
+          <e p="TagRepository" t="Include">
+            <e p="Read.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PhotoFlicker.Tests.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -180,6 +211,12 @@
                 <e p="tag.service.spec.ts" t="Include" />
                 <e p="tag.service.ts" t="Include" />
               </e>
+              <e p="all-photos" t="Include">
+                <e p="all-photos.component.css" t="Include" />
+                <e p="all-photos.component.html" t="Include" />
+                <e p="all-photos.component.spec.ts" t="Include" />
+                <e p="all-photos.component.ts" t="Include" />
+              </e>
               <e p="app.component.html" t="Include" />
               <e p="app.component.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
@@ -253,6 +290,10 @@
         <e p="Migrations" t="Include">
           <e p="20201016085552_InitialMigration.Designer.cs" t="Include" />
           <e p="20201016085552_InitialMigration.cs" t="Include" />
+          <e p="20201016181234_RemoveManyToManyConnectionBetweenPhotosAndTags.Designer.cs" t="Include" />
+          <e p="20201016181234_RemoveManyToManyConnectionBetweenPhotosAndTags.cs" t="Include" />
+          <e p="20201016182532_BackToManyToManyRelationship.Designer.cs" t="Include" />
+          <e p="20201016182532_BackToManyToManyRelationship.cs" t="Include" />
           <e p="PhotoFlickerContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Pages" t="Include">

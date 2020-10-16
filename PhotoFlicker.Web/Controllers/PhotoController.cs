@@ -39,5 +39,24 @@ namespace PhotoFlicker.Web.Controllers
             return Ok(await _repository.TakeWhereTag(tagId, amount));
         }
 
+        [HttpGet]
+        [Route("tagLikes/{pattern}/{amount}")]
+        public async Task<ActionResult<IEnumerable<Tag>>> TakeWithTagLikes([FromRoute] string pattern, int amount)
+        {
+            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być liczbą ujemną"); }
+
+            IEnumerable<Photo> data;
+            if (string.IsNullOrEmpty(pattern))
+            {
+                data = await _repository.Take(amount);
+            }
+            else
+            {
+                data = await _repository.TakeWithTagLike(pattern, amount);
+            }
+            
+            return Ok(data);
+        }
+
     }
 }
