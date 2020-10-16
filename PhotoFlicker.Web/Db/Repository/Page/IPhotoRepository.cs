@@ -15,9 +15,9 @@ namespace PhotoFlicker.Web.Db.Repository.Page
         Task<bool> Create(Photo created);
         Task<bool> UpdatePath(int id, string newPath);
         Task<bool> DeepDelete(int id);
-        Task<bool> AddTag(int photoId, int tagId);
-        Task<bool> RemoveTag(int photoId, int tagId);
+        Task<bool> AddTagToPhoto(int photoId, int tagId);
+        Task<bool> RemoveTagFromPhoto(int photoId, int tagId);
         Task<bool> IsTagExist(int tagId);
-        Task SaveChangesAsync();
+        Task SaveChanges();
     }
 }

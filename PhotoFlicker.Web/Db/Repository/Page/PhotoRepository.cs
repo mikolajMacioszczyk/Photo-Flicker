@@ -97,7 +97,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
             return true;
         }
 
-        public async Task<bool> AddTag(int photoId, int tagId)
+        public async Task<bool> AddTagToPhoto(int photoId, int tagId)
         {
             var fromDb = await _db.PhotoItems.Include(p => p.Tags).FirstOrDefaultAsync(p => p.Id == photoId);
             if (fromDb == null) { return false; }
@@ -107,7 +107,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
 
             if (fromDb.Tags != null && fromDb.Tags.Contains(tag)) { return true; }
             
-            var tags = new List<Tag>(){tag};
+            var tags = new List<Models.Tag>(){tag};
             if (fromDb.Tags != null) { tags.AddRange(fromDb.Tags); }
             fromDb.Tags = tags;
             
@@ -118,7 +118,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
             return true;
         }
 
-        public async Task<bool> RemoveTag(int photoId, int tagId)
+        public async Task<bool> RemoveTagFromPhoto(int photoId, int tagId)
         {
             var fromDb = await _db.PhotoItems.Include(p => p.Tags).FirstOrDefaultAsync(p => p.Id == photoId);
             if (fromDb == null) { return false; }
@@ -128,7 +128,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
             
             if (fromDb.Tags == null || !fromDb.Tags.Contains(tag)) { return true; }
 
-            var tags = new List<Tag>(fromDb.Tags);
+            var tags = new List<Models.Tag>(fromDb.Tags);
             tags.Remove(tag);
             fromDb.Tags = tags;
             
@@ -145,7 +145,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
             return tag != null;
         }
 
-        public async Task SaveChangesAsync()
+        public async Task SaveChanges()
         {
             await _db.SaveChangesAsync();
         }

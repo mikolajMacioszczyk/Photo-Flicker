@@ -1,7 +1,15 @@
 header{
-  margin: 50px 0 120px 0;
+  margin: 50px 0 0 0;
+}
+
+.time-panel{
+  margin: 20px 0 100px 0;
 }
 
 .big-font{
   font-size: 60px;
+}
+
+.margin-10{
+  margin: 10px;
 }

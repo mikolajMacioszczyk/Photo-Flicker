@@ -1,10 +1,19 @@
 <header>
   <h2>Welcome in Photo Flicker!</h2>
-  <h3 class="d-flex justify-content-center">Type some tag to see related photos. You've got 20 seconds to describe it's content</h3>
+  <div class="d-flex justify-content-center h3">Type some tag to see related photos. You've got &nbsp;<h2 class="text-success">{{time}}</h2>&nbsp; seconds to describe it's content</div>
   <h2 class="d-flex justify-content-end">Good luck!</h2>
 </header>
 
-<form class="d-flex justify-content-around" [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="d-flex time-panel">
+  <p class="margin-10">Wybierz czas:</p>
+  <button class="btn btn-sm btn-secondary margin-10" (click)="time = 1" >test</button>
+  <button class="btn btn-sm btn-secondary margin-10" (click)="time = 15" >15</button>
+  <button class="btn btn-sm btn-secondary margin-10" (click)="time = 30" >30</button>
+  <button class="btn btn-sm btn-secondary margin-10" (click)="time = 50" >50</button>
+</div>
+
+
+<form class="d-flex justify-content-between" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group my-auto">
     <label>
       <input type="text"
@@ -16,3 +25,4 @@
 
   <button class="btn btn-success big-font align-middle" type="submit" [disabled]="form.invalid">Start!</button>
 </form>
+<div class="text-danger pl-2">{{ message }}</div>

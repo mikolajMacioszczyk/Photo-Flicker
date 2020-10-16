@@ -230,6 +230,7 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="PhotoController.cs" t="Include" />
+          <e p="TagController.cs" t="Include" />
         </e>
         <e p="Db" t="Include">
           <e p="Context" t="Include">
@@ -239,6 +240,10 @@
             <e p="Page" t="Include">
               <e p="IPhotoRepository.cs" t="Include" />
               <e p="PhotoRepository.cs" t="Include" />
+            </e>
+            <e p="Tag" t="Include">
+              <e p="ITagRepository.cs" t="Include" />
+              <e p="TagRepository.cs" t="Include" />
             </e>
           </e>
         </e>

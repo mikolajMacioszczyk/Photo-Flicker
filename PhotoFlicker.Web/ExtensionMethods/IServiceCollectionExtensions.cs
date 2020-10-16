@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using PhotoFlicker.Web.Db.Repository.Page;
+using PhotoFlicker.Web.Db.Repository.Tag;
 
 namespace PhotoFlicker.Web.ExtensionMethods
 {
@@ -7,7 +8,8 @@ namespace PhotoFlicker.Web.ExtensionMethods
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            return services.AddScoped<IPhotoRepository, PhotoRepository>();
+            return services.AddScoped<IPhotoRepository, PhotoRepository>()
+                .AddScoped<ITagRepository, TagRepository>();
         }
     }
 }

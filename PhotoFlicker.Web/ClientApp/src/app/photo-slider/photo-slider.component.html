@@ -1,3 +1,15 @@
-<div class="card">
-  <img class="card-img-top" [src]="currentPhoto.path" [alt]="tag">
+<!-- Display content -->
+<div *ngIf="!isEnd">
+  <div class="card">
+    <img class="card-img-top" [src]="currentPhoto.path" [alt]="tag">
+  </div>
+</div>
+
+<!-- End content -->
+<div *ngIf="isEnd">
+  <header>Spróbuj raz jeszcze!</header>
+  <div class="d-flex justify-content-around">
+    <button class="btn btn-success big-text" (click)="tryAgain()">Z tagiem "{{tag}}"</button>
+    <button class="btn btn-success big-text" (click)="backHome()">Z innym tagiem</button>
+  </div>
 </div>
