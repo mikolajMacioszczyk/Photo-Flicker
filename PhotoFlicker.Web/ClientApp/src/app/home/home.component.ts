@@ -17,6 +17,6 @@ export class HomeComponent {
   }
 
   onSubmit(){
-    this.router.navigate(['slider', this.tag]);
+    this.router.navigate(['slider', this.tag, 5000]);
   }
 }

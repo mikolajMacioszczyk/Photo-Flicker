@@ -29,7 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'slider/:tag', component: PhotoSliderComponent },
+      { path: 'slider/:tag/:time', component: PhotoSliderComponent },
       { path: '**', component: NotFoundComponent },
     ])
   ],
