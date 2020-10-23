@@ -24,7 +24,7 @@ namespace PhotoFlicker.Web.Controllers
         {
             if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być liczbą ujemną"); }
             
-            var data = await _repository.Take(amount);
+            var data = await _repository.TakeIncludeTags(amount);
             return Ok(data);
         }
 

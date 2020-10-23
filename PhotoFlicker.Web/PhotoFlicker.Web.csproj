@@ -13,6 +13,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.9" />
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.8" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0-rc.2.20475.6" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0-rc.2.20475.6">
@@ -32,6 +33,10 @@
     <ItemGroup>
       <ProjectReference Include="..\PhotoFlicker.Dal\PhotoFlicker.Dal.csproj" />
       <ProjectReference Include="..\PhotoFlicker.Models\PhotoFlicker.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ClientApp\src\app\Common\Validators" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

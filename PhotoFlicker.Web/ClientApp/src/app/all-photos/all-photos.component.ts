@@ -3,6 +3,7 @@ import {PhotoService} from "../Services/photo.service";
 import {IPhoto} from "../Models/Photo";
 import {Subscription} from "rxjs";
 import {TagService} from "../Services/tag.service";
+import {ITag} from "../Models/Tag";
 
 @Component({
   selector: 'app-all-photos',
@@ -11,9 +12,12 @@ import {TagService} from "../Services/tag.service";
 })
 export class AllPhotosComponent implements OnInit, OnDestroy {
   photos: IPhoto[];
+  recommendedTags: ITag[];
   message: string;
+  tag = "Wszystkie:";
   private subscription = new Subscription();
   private pageSize = 100;
+  private recommendedSize = 5;
 
   constructor(private photoService: PhotoService, private tagService: TagService) { }
 
@@ -22,6 +26,14 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
     this.photoService.take(this.pageSize).subscribe(photos => {
       this.photos = photos;
     }));
+    this.subscription.add(
+      this.tagService.getRandom(this.recommendedSize).subscribe(tags =>{
+        if (tags.length == 0){
+          console.log("Before OK")
+        }
+        this.recommendedTags = tags;
+      })
+    )
   }
 
   ngOnDestroy(): void {
@@ -29,14 +41,18 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
   }
 
   search(tag: string) {
-    this.subscription.unsubscribe();
     this.subscription.add(
     this.tagService.isTagExists(tag).subscribe( isExist =>
     {
+      console.log("Dupa")
+
       if (isExist){
         this.loadWithTag(tag);
-      } else {
+        this.tag = tag;
+      }
+      else {
         this.message = "Nie ma takiego tagu";
+        this.tag = "Wszystkie";
       }
     }
     ));

@@ -1,6 +1,21 @@
 <div class="d-flex">
-  <label for="searchTag"></label>
   <input id="searchTag" type="text" #searchTag >
   <button type="button" (click)="search(searchTag.value)">Search</button>
+  <label for="searchTag">{{message}}</label>
 </div>
 <h1> Polecane tagi</h1>
+<ul>
+  <li *ngFor="let recommended of recommendedTags">{{recommended.name}}</li>
+</ul>
+
+<div class="d-flex justify-content-center"><h1 *ngIf="tag">{{tag}}:</h1></div>
+<div class="row">
+  <div *ngFor="let photo of photos" class="col-md-6 col-lg-4">
+    <img class="card-img-top w-100" [src]="photo.path" alt="">
+    <div class="card-text">
+      <div class="text-wrap">
+        <h4 *ngFor="let tag of photo.tags"> #{{tag.name}}  </h4>
+      </div>
+    </div>
+  </div>
+</div>

@@ -82,32 +82,33 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         }
         
         [Test]
-        public async Task GetRandom_ShouldReturnRandomItem()
+        public async Task GetRandom_TooHighArgument_ShouldReturnFullList()
         {
             // arrange
             var context = await InitializeContext();
             var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var argument = 10;
+            var expectedSize = 3;
             
             //act
-            var result = await repository.GetRandom();
+            var result = await repository.GetRandom(argument);
 
             //assert
-            Assert.NotNull(result);
+            Assert.AreEqual(expectedSize, result.Count());
             
             //clean
             DisposeContext(context);
         }
-        
+
         [Test]
         public async Task GetByName_NullArgument_ShouldReturnNull()
         {
             // arrange
             var context = await InitializeContext();
             var repository = new Web.Db.Repository.Tag.TagRepository(context);
-            string name = null;
             
             //act
-            var result = await repository.GetByName(name);
+            var result = await repository.GetByNameLike(null);
 
             //assert
             Assert.Null(result);
@@ -126,7 +127,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
             int expectedId = 1;
             
             //act
-            var result = await repository.GetByName(name);
+            var result = await repository.GetByNameLike(name);
 
             //assert
             Assert.NotNull(result);
@@ -146,7 +147,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
             int expectedId = 1;
             
             //act
-            var result = await repository.GetByName(name);
+            var result = await repository.GetByNameLike(name);
 
             //assert
             Assert.NotNull(result);
@@ -165,7 +166,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
             string name = "Not Matched";
             
             //act
-            var result = await repository.GetByName(name);
+            var result = await repository.GetByNameLike(name);
 
             //assert
             Assert.Null(result);
@@ -173,7 +174,6 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
             //clean
             DisposeContext(context);
         }
-        
         
         private async Task<PhotoFlickerContext> InitializeContext()
         {

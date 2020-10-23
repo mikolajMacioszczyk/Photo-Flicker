@@ -21,17 +21,27 @@ namespace PhotoFlicker.Web.Controllers
         [Route("{amount}")]
         public async Task<ActionResult<IEnumerable<Tag>>> Take([FromRoute] int amount)
         {
-            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może bym ujemna"); }
+            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być ujemna"); }
 
             var data = await _repository.Take(amount);
             return Ok(data);
         }
 
         [HttpGet]
+        [Route("random/{amount}")]
+        public async Task<ActionResult<IEnumerable<Tag>>> TakeRandom([FromRoute] int amount)
+        {
+            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być ujemna"); }
+
+            var data = await _repository.GetRandom(amount);
+            return Ok(data);
+        }
+        
+        [HttpGet]
         [Route("single/{name}")]
         public async Task<ActionResult<IEnumerable<Tag>>> GetByName([FromRoute] string name)
         {
-            var fromRepo = await _repository.GetByName(name);
+            var fromRepo = await _repository.GetByNameLike(name);
             if (fromRepo != null)
             {
                 return Ok(fromRepo);
@@ -44,13 +54,21 @@ namespace PhotoFlicker.Web.Controllers
         [Route("canFind/{name}")]
         public async Task<ActionResult<IEnumerable<Tag>>> IsTagExists([FromRoute] string name)
         {
-            var fromRepo = await _repository.GetByName(name);
+            var fromRepo = await _repository.GetByNameLike(name);
             if (fromRepo != null)
             {
                 return Ok(true);
             }
 
             return Ok(false);
+        }
+        
+        [HttpGet]
+        [Route("isUnique/{name}")]
+        public async Task<ActionResult<bool>> IsUnique([FromRoute] string name)
+        {
+            var output = await _repository.IsTagNameExist(name);
+            return Ok(output);
         }
     }
 }

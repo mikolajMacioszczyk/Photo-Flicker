@@ -7,22 +7,33 @@ import {Tag} from "@angular/compiler/src/i18n/serializers/xml_helper";
   providedIn: 'root'
 })
 export class TagService {
+  private readonly baseUrl: string;
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
-
-  Take(amount: number): Observable<any>{
-    return this.http.get<Tag>(this.baseUrl+"api/tag/"+amount);
+  constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    this.baseUrl = baseUrl+"api/tag/";
   }
 
-  TakeWherePhoto(photoId: number, amount: number): Observable<any>{
-    return this.http.get<Tag>(this.baseUrl+"api/tag/"+photoId+"/"+amount);
+  take(amount: number): Observable<any>{
+    return this.http.get<Tag>(this.baseUrl+amount);
+  }
+
+  getRandom(amount: number): Observable<any>{
+    return this.http.get<Tag>(this.baseUrl+"random/"+amount);
+  }
+
+  takeWherePhoto(photoId: number, amount: number): Observable<any>{
+    return this.http.get<Tag>(this.baseUrl+photoId+"/"+amount);
   }
 
   getByName(name: string): Observable<any>{
-    return this.http.get<Tag>(this.baseUrl+"api/tag/single/"+name);
+    return this.http.get<Tag>(this.baseUrl+"single/"+name);
   }
 
   isTagExists(name: string): Observable<boolean>{
-    return this.http.get<boolean>(this.baseUrl+"api/tag/canFind/"+name);
+    return this.http.get<boolean>(this.baseUrl+"canFind/"+name);
+  }
+
+  isTagUnique(name: string): Observable<boolean>{
+    return this.http.get<boolean>(this.baseUrl+"isUnique/"+name);
   }
 }

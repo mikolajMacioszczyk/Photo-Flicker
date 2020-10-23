@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PhotoFlicker.Models;
 using PhotoFlicker.Web.Db.Context;
 
 namespace PhotoFlicker.Web.Db.Repository.Tag
@@ -25,10 +24,13 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
             return await _db.TagItems.Take(amount).ToListAsync();
         }
 
-        public async Task<Models.Tag> GetRandom()
+        public async Task<IEnumerable<Models.Tag>> GetRandom(int amount)
         {
-            var idx = _random.Next(1, await _db.TagItems.CountAsync());
-            return await _db.TagItems.Skip(idx).FirstOrDefaultAsync();
+            if (amount < 0) { amount = 0;}
+
+            if (amount > await _db.TagItems.CountAsync()) { return await _db.TagItems.ToListAsync(); }
+            
+            return await _db.TagItems.OrderBy(t => Guid.NewGuid()).Take(amount).ToListAsync();
         }
 
         public async Task<Models.Tag> GetById(int id)
@@ -36,11 +38,11 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
             return await _db.TagItems.FirstOrDefaultAsync(t => t.Id == id);
         }
 
-        public async Task<Models.Tag> GetByName(string name)
+        public async Task<Models.Tag> GetByNameLike(string name)
         {
             if (string.IsNullOrEmpty(name)) { return null;}
             name = name.ToLower();
-            return await _db.TagItems.FirstOrDefaultAsync(t => t.Name.ToLower() == name);
+            return await _db.TagItems.FirstOrDefaultAsync(t => t.Name.ToLower().Contains(name));
         }
 
         public async Task<bool> Create(Models.Tag created)
@@ -71,6 +73,13 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
         {
             var fromDb = await _db.PhotoItems.FirstOrDefaultAsync(p => p.Id == photoId);
             return (fromDb != null);
+        }
+
+        public async Task<bool> IsTagNameExist(string tagName) {
+            var lowerTagName = tagName.ToLower();
+            var fromDb = await _db.TagItems.FirstOrDefaultAsync(t => t.Name.ToLower().Equals(lowerTagName));
+
+            return fromDb != null;
         }
 
         public async Task SaveChanges()
