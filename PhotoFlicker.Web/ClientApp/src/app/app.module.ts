@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +17,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AllPhotosComponent } from './all-photos/all-photos.component';
 import { NewPhotoComponent } from './new-photo/new-photo.component';
 import { NewTagComponent } from './new-tag/new-tag.component';
+
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { NewTagComponent } from './new-tag/new-tag.component';
       { path: 'photos/new', component: NewPhotoComponent },
       { path: 'tags/new', component: NewTagComponent },
       { path: '**', component: NotFoundComponent },
-    ])
+    ]),
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [PhotoService, TagService],
   bootstrap: [AppComponent]

@@ -17,14 +17,14 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
             _db = db;
         }
 
-        public async Task<IEnumerable<Models.Tag>> Take(int amount)
+        public async Task<IEnumerable<Models.Models.Tag>> Take(int amount)
         {
             if (amount < 0) { amount = 0; }
             
             return await _db.TagItems.Take(amount).ToListAsync();
         }
 
-        public async Task<IEnumerable<Models.Tag>> GetRandom(int amount)
+        public async Task<IEnumerable<Models.Models.Tag>> GetRandom(int amount)
         {
             if (amount < 0) { amount = 0;}
 
@@ -33,19 +33,19 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
             return await _db.TagItems.OrderBy(t => Guid.NewGuid()).Take(amount).ToListAsync();
         }
 
-        public async Task<Models.Tag> GetById(int id)
+        public async Task<Models.Models.Tag> GetById(int id)
         {
             return await _db.TagItems.FirstOrDefaultAsync(t => t.Id == id);
         }
 
-        public async Task<Models.Tag> GetByNameLike(string name)
+        public async Task<Models.Models.Tag> GetByNameLike(string name)
         {
             if (string.IsNullOrEmpty(name)) { return null;}
             name = name.ToLower();
             return await _db.TagItems.FirstOrDefaultAsync(t => t.Name.ToLower().Contains(name));
         }
 
-        public async Task<bool> Create(Models.Tag created)
+        public async Task<bool> Create(Models.Models.Tag created)
         {
             await _db.TagItems.AddAsync(created);
             return true;
@@ -79,7 +79,7 @@ namespace PhotoFlicker.Web.Db.Repository.Tag
             var lowerTagName = tagName.ToLower();
             var fromDb = await _db.TagItems.FirstOrDefaultAsync(t => t.Name.ToLower().Equals(lowerTagName));
 
-            return fromDb != null;
+            return fromDb == null;
         }
 
         public async Task SaveChanges()

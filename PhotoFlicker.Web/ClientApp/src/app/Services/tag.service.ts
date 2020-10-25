@@ -2,6 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Tag} from "@angular/compiler/src/i18n/serializers/xml_helper";
+import {ITag} from "../Models/Tag";
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,9 @@ export class TagService {
 
   isTagUnique(name: string): Observable<boolean>{
     return this.http.get<boolean>(this.baseUrl+"isUnique/"+name);
+  }
+
+  createTag(tag: ITag): Observable<any>{
+    return this.http.post(this.baseUrl+"create", {created: tag});
   }
 }

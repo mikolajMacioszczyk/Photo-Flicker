@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhotoFlicker.Models;
+using PhotoFlicker.Models.Models;
 
 namespace PhotoFlicker.Web.Db.Context
 {

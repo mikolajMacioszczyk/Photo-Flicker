@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace PhotoFlicker.Models
+namespace PhotoFlicker.Models.Models
 {
     public class Tag
     {

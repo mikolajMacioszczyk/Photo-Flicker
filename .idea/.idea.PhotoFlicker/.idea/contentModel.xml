@@ -12,9 +12,25 @@
     <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="PhotoFlicker.Models" t="IncludeRecursive">
-        <e p="Photo.cs" t="Include" />
+        <e p="Dtos" t="Include">
+          <e p="Photo" t="Include">
+            <e p="PhotoCreateDto.cs" t="Include" />
+            <e p="PhotoReadDto.cs" t="Include" />
+          </e>
+          <e p="Tag" t="Include">
+            <e p="TagCreateDto.cs" t="Include" />
+            <e p="TagReadDto.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Models" t="Include">
+          <e p="Photo.cs" t="Include" />
+          <e p="Tag.cs" t="Include" />
+        </e>
         <e p="PhotoFlicker.Models.csproj" t="IncludeRecursive" />
-        <e p="Tag.cs" t="Include" />
+        <e p="Profiles" t="Include">
+          <e p="PhotoProfile.cs" t="Include" />
+          <e p="TagProfile.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -66,12 +82,14 @@
             <e p="tsconfig.e2e.json" t="Include" />
           </e>
           <e p="node_modules/@angular/animations" t="IncludeRecursive" />
+          <e p="node_modules/@angular/cdk" t="IncludeRecursive" />
           <e p="node_modules/@angular/cli" t="IncludeRecursive" />
           <e p="node_modules/@angular/common" t="IncludeRecursive" />
           <e p="node_modules/@angular/compiler" t="IncludeRecursive" />
           <e p="node_modules/@angular/compiler-cli" t="IncludeRecursive" />
           <e p="node_modules/@angular/core" t="IncludeRecursive" />
           <e p="node_modules/@angular/forms" t="IncludeRecursive" />
+          <e p="node_modules/@angular/material" t="IncludeRecursive" />
           <e p="node_modules/@angular/platform-browser" t="IncludeRecursive" />
           <e p="node_modules/@angular/platform-browser-dynamic" t="IncludeRecursive" />
           <e p="node_modules/@angular/platform-server" t="IncludeRecursive" />
@@ -110,6 +128,7 @@
           <e p="node_modules/es6-promise" t="IncludeRecursive" />
           <e p="node_modules/fast-deep-equal" t="IncludeRecursive" />
           <e p="node_modules/fast-json-stable-stringify" t="IncludeRecursive" />
+          <e p="node_modules/hammerjs" t="IncludeRecursive" />
           <e p="node_modules/jasmine-core" t="IncludeRecursive" />
           <e p="node_modules/jasmine-spec-reporter" t="IncludeRecursive" />
           <e p="node_modules/jest-worker" t="IncludeRecursive" />
@@ -203,7 +222,9 @@
           <e p="src" t="Include">
             <e p="app" t="Include">
               <e p="Common" t="Include">
-                <e p="Validators" t="Include" />
+                <e p="Validators" t="Include">
+                  <e p="uniqueTagValidator.ts" t="Include" />
+                </e>
               </e>
               <e p="Models" t="Include">
                 <e p="Photo.ts" t="Include" />

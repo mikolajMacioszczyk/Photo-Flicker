@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PhotoFlicker.Models;
+using PhotoFlicker.Models.Models;
 using PhotoFlicker.Web.Db.Repository.Tag;
 
 namespace PhotoFlicker.Web.Controllers
@@ -69,6 +70,25 @@ namespace PhotoFlicker.Web.Controllers
         {
             var output = await _repository.IsTagNameExist(name);
             return Ok(output);
+        }
+
+        [HttpPost]
+        [Route("create")]
+        public async Task<ActionResult<bool>> Create()
+        {
+            var created = new Tag();
+            if (created == null)
+            {
+                return BadRequest("Argument \"created\" cannot be null");
+            }
+
+            if (await _repository.Create(created))
+            {
+                await _repository.SaveChanges();
+                return Ok(true);
+            }
+
+            return BadRequest("Error");
         }
     }
 }

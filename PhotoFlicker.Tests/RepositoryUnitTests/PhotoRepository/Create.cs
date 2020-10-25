@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using PhotoFlicker.Models;
+using PhotoFlicker.Models.Models;
 using PhotoFlicker.Web.Db.Context;
 
 namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository

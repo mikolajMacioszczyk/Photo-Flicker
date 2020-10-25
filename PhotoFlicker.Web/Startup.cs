@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -5,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PhotoFlicker.Models.Profiles;
 using PhotoFlicker.Web.Db.Context;
 using PhotoFlicker.Web.ExtensionMethods;
 
@@ -34,6 +36,13 @@ namespace PhotoFlicker.Web
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
+            
+            var mapperConfiguration = new MapperConfiguration(configuration =>
+            {
+                configuration.AddProfile<TagProfile>();
+                configuration.AddProfile<PhotoProfile>();
+            });
+            services.AddSingleton(mapperConfiguration.CreateMapper());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

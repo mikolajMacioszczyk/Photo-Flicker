@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PhotoFlicker.Models;
+using PhotoFlicker.Models.Models;
 using PhotoFlicker.Web.Db.Context;
 
 namespace PhotoFlicker.Web.Db.Repository.Page
@@ -125,7 +126,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
 
             if (fromDb.Tags != null && fromDb.Tags.Contains(tag)) { return true; }
             
-            var tags = new List<Models.Tag>(){tag};
+            var tags = new List<Models.Models.Tag>(){tag};
             if (fromDb.Tags != null) { tags.AddRange(fromDb.Tags); }
             fromDb.Tags = tags;
             
@@ -142,7 +143,7 @@ namespace PhotoFlicker.Web.Db.Repository.Page
             
             if (fromDb.Tags == null || !fromDb.Tags.Contains(tag)) { return true; }
 
-            var tags = new List<Models.Tag>(fromDb.Tags);
+            var tags = new List<Models.Models.Tag>(fromDb.Tags);
             tags.Remove(tag);
             fromDb.Tags = tags;
             
