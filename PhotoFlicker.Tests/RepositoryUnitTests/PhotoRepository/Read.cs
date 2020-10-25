@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.Take(-5);
@@ -47,7 +47,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.Take(2);
@@ -64,7 +64,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.Take(10);
@@ -82,7 +82,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.TakeIncludeTags(-5);
@@ -99,7 +99,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.TakeIncludeTags(2);
@@ -119,7 +119,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             
             //act
             var result = await repository.TakeIncludeTags(10);
@@ -141,7 +141,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int tagId = -1;
             int maxAmount = 2;
             
@@ -160,7 +160,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int tagId = 2;
             int expectedCount = 2;
             int maxAmount = 10;
@@ -184,7 +184,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int tagId = 2;
             int amount = 1;
             
@@ -206,7 +206,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = -1;
             
             //act
@@ -224,7 +224,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 3;
 
             for (int i = 0; i < 10; i++)
@@ -248,7 +248,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 10;
             int tagId = 10;
             
@@ -267,7 +267,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = -1;
             int tagId = 10;
             
@@ -286,7 +286,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int maxAmount = 3;
             int tagId = 2;
 
@@ -309,7 +309,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 1;
             int tagId = 2;
 
@@ -332,7 +332,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 2;
             int expectedSize = 2;
 
@@ -354,7 +354,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 5;
             string pattern = "Warsaw";
 
@@ -374,7 +374,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 2;
             string pattern = "NotMatched";
 
@@ -393,7 +393,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 5;
             string pattern = "erli";
 
@@ -414,7 +414,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             int amount = 5;
             int expectedSize = 3;
             string pattern = "ar";

@@ -17,13 +17,23 @@
         </e>
         <e p="PhotoFlicker.Application.csproj" t="IncludeRecursive" />
         <e p="Repository" t="Include">
-          <e p="Page" t="Include">
+          <e p="Photo" t="Include">
             <e p="IPhotoRepository.cs" t="Include" />
             <e p="PhotoRepository.cs" t="Include" />
           </e>
           <e p="Tag" t="Include">
             <e p="ITagRepository.cs" t="Include" />
             <e p="TagRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Service" t="Include">
+          <e p="Photo" t="Include">
+            <e p="IPhotoService.cs" t="Include" />
+            <e p="PhotoService.cs" t="Include" />
+          </e>
+          <e p="Tag" t="Include">
+            <e p="ITagService.cs" t="Include" />
+            <e p="TagService.cs" t="Include" />
           </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />

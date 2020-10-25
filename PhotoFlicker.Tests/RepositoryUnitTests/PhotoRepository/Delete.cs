@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var idToDelete = 10;
             var expectedSize = Photos.Count;
             
@@ -52,7 +52,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var idToDelete = 3;
             var expectedSize = Photos.Count -1;
             
@@ -76,7 +76,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var idToDelete = 1;
             var expectedSize = Photos.Count -1;
             

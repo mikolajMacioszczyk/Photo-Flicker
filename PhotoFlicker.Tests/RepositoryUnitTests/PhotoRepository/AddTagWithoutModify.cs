@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var tagId = 10;
             var photoId = 1;
             var photoFromList = Photos.First(p => p.Id == photoId);
@@ -54,7 +54,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var tagId = 1;
             var currentTagCounts = 2;
             var photoId = 1;

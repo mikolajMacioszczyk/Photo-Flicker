@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Application.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Photo.PhotoRepository(context);
             var tagId = 3;
             var photoId = 1;
             

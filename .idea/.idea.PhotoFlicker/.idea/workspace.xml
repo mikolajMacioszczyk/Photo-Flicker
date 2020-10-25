@@ -13,29 +13,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Add Dtos and Tag Create option">
+    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Move context to separate project">
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Service/Photo/IPhotoService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Service/Photo/PhotoService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Service/Tag/ITagService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Service/Tag/TagService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/PhotoFlickerTestBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/PhotoFlickerTestBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/IPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/IPhotoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/PhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/PhotoRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/AddTagSuccessfully.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/AddTagSuccessfully.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/AddTagWithoutModify.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/AddTagWithoutModify.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Create.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Delete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Delete.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Read.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PhotoRepository/Read.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Random.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Random.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Read.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Read.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Context/PhotoFlickerContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Context/PhotoFlickerContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/IPhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/IPhotoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Page/PhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/PhotoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Tag/ITagRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Tag/ITagRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Db/Repository/Tag/TagRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Tag/TagRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016085552_InitialMigration.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016085552_InitialMigration.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016181234_RemoveManyToManyConnectionBetweenPhotosAndTags.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016181234_RemoveManyToManyConnectionBetweenPhotosAndTags.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016182532_BackToManyToManyRelationship.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/20201016182532_BackToManyToManyRelationship.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/PhotoFlickerContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/PhotoFlickerContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/TagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/TagController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ExtensionMethods/IServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ExtensionMethods/IServiceCollectionExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +46,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepositoryUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/mvdsdksvl.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepositoryReadUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepositoryCreateUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/PageRepositoryCreateUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/PageRepositoryDeleteUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/PageRepositoryReadUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/PageRepositoryAddUnitTests.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/AddTagSuccesful.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/AddTagSuccesfull.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/AddTagSuccessfully.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/Create.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/Delete.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/PageRepository/Read.cs" />
@@ -74,7 +58,6 @@
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/new-photo/new-photo.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Random.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/Program.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/all-photos/all-photos.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/all-photos/all-photos.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/nav-menu/nav-menu.component.html" />
@@ -88,7 +71,6 @@
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Models/Tag.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/new-tag/new-tag.component.html" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/TagController.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/tag.service.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/new-tag/new-tag.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Models/Tag.cs" />
@@ -99,9 +81,22 @@
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Dtos/Photo/PhotoCreateDto.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Profiles/PhotoProfile.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Models/Profiles/TagProfile.cs" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Class1.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Context/PhotoFlickerContext.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/IPhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/PhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Tag/ITagRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Tag/TagRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Service/Tag/ITagService.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Service/Tag/TagService.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/IPhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/PhotoRepository.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Service/Photo/IPhotoService.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Application/Service/Photo/PhotoService.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ExtensionMethods/IServiceCollectionExtensions.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/PhotoController.cs" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Controllers/TagController.cs" />
       </list>
     </option>
   </component>
@@ -180,7 +175,7 @@
       <workItem from="1603553721926" duration="685000" />
       <workItem from="1603577612046" duration="21000" />
       <workItem from="1603581608159" duration="3787000" />
-      <workItem from="1603649975796" duration="304000" />
+      <workItem from="1603649975796" duration="2816000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602836435958</created>
@@ -238,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603585384054</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Move context to separate project">
+      <created>1603650573368</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603650573368</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Move context to separate project">
+      <created>1603650579953</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603650579953</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +276,8 @@
     <MESSAGE value="Repository Tests" />
     <MESSAGE value="Photo and new tag panel" />
     <MESSAGE value="Add Dtos and Tag Create option" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Dtos and Tag Create option" />
+    <MESSAGE value="Move context to separate project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move context to separate project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="188" width="832" height="711" key="#Inspection_severity" timestamp="1603462467355">
@@ -413,20 +423,21 @@
     </state>
     <state x="555" y="275" key="Rider.ProjectTemplateDialog.Size/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603650126198" />
     <state x="555" y="275" width="800" height="537" key="Rider.ProjectTemplateDialog.Size/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602870685575" />
-    <state x="651" y="209" width="608" height="669" key="RiderGenerateDialog" timestamp="1602852363758">
+    <state x="651" y="209" width="617" height="669" key="RiderGenerateDialog" timestamp="1603651964325">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
+    <state x="651" y="209" width="617" height="669" key="RiderGenerateDialog/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603651964325" />
     <state x="651" y="209" width="608" height="669" key="RiderGenerateDialog/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602852363758" />
-    <state x="2475" y="268" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603585392716">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603650582859">
+      <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state x="555" y="276" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603464625926" />
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603650582859" />
     <state x="2475" y="268" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603585392716" />
     <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602885942708" />
-    <state x="424" y="27" width="1405" height="959" maximized="true" key="dock-window-1" timestamp="1603461312364">
-      <screen x="0" y="27" width="1920" height="1003" />
+    <state x="1920" y="0" width="1347" height="959" maximized="true" key="dock-window-1" timestamp="1603651060264">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="424" y="27" width="1405" height="959" maximized="true" key="dock-window-1/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603461312364" />
+    <state x="1920" y="0" width="1347" height="959" maximized="true" key="dock-window-1/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603651060264" />
     <state x="2008" y="27" width="1416" height="1003" maximized="true" key="dock-window-1/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602872276886" />
     <state x="2176" y="106" width="1416" height="1003" key="dock-window-2" timestamp="1602875847003">
       <screen x="1920" y="0" width="1920" height="1080" />
