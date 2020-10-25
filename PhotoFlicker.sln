@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoFlicker.Models", "Phot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoFlicker.Tests", "PhotoFlicker.Tests\PhotoFlicker.Tests.csproj", "{3DA575D9-C807-40B7-8849-6D847552F699}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoFlicker.Application", "PhotoFlicker.Application\PhotoFlicker.Application.csproj", "{65E9A11D-8BC7-4BB7-A368-B1BBC53938E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{3DA575D9-C807-40B7-8849-6D847552F699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA575D9-C807-40B7-8849-6D847552F699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA575D9-C807-40B7-8849-6D847552F699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E9A11D-8BC7-4BB7-A368-B1BBC53938E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E9A11D-8BC7-4BB7-A368-B1BBC53938E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E9A11D-8BC7-4BB7-A368-B1BBC53938E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E9A11D-8BC7-4BB7-A368-B1BBC53938E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

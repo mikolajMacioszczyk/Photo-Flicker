@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using PhotoFlicker.Application.Context;
 using PhotoFlicker.Models;
 using PhotoFlicker.Models.Models;
-using PhotoFlicker.Web.Db.Context;
 
 namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
 {
@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             var argument = -5;
             var expectedSize = 0;
             
@@ -49,7 +49,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             var argument = 2;
             var expectedSize = 2;
             
@@ -68,7 +68,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             var argument = 10;
             var expectedSize = 3;
             
@@ -87,7 +87,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             var argument = 10;
             var expectedSize = 3;
             
@@ -106,7 +106,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             
             //act
             var result = await repository.GetByNameLike(null);
@@ -123,7 +123,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             string name = "Warsaw";
             int expectedId = 1;
             
@@ -143,7 +143,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             string name = "waRSaw";
             int expectedId = 1;
             
@@ -163,7 +163,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.TagRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Tag.TagRepository(context);
+            var repository = new Application.Repository.Tag.TagRepository(context);
             string name = "Not Matched";
             
             //act

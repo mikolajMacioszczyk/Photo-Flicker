@@ -11,6 +11,30 @@
     <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.api.dll" t="Include" />
     <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.15.1/build/netcoreapp2.0/nunit.engine.dll" t="Include" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="PhotoFlicker.Application" t="IncludeRecursive">
+        <e p="Context" t="Include">
+          <e p="PhotoFlickerContext.cs" t="Include" />
+        </e>
+        <e p="PhotoFlicker.Application.csproj" t="IncludeRecursive" />
+        <e p="Repository" t="Include">
+          <e p="Page" t="Include">
+            <e p="IPhotoRepository.cs" t="Include" />
+            <e p="PhotoRepository.cs" t="Include" />
+          </e>
+          <e p="Tag" t="Include">
+            <e p="ITagRepository.cs" t="Include" />
+            <e p="TagRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="PhotoFlicker.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="PhotoFlicker.Models" t="IncludeRecursive">
         <e p="Dtos" t="Include">
           <e p="Photo" t="Include">
@@ -305,21 +329,6 @@
         <e p="Controllers" t="Include">
           <e p="PhotoController.cs" t="Include" />
           <e p="TagController.cs" t="Include" />
-        </e>
-        <e p="Db" t="Include">
-          <e p="Context" t="Include">
-            <e p="PhotoFlickerContext.cs" t="Include" />
-          </e>
-          <e p="Repository" t="Include">
-            <e p="Page" t="Include">
-              <e p="IPhotoRepository.cs" t="Include" />
-              <e p="PhotoRepository.cs" t="Include" />
-            </e>
-            <e p="Tag" t="Include">
-              <e p="ITagRepository.cs" t="Include" />
-              <e p="TagRepository.cs" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="ExtensionMethods" t="Include">
           <e p="IServiceCollectionExtensions.cs" t="Include" />

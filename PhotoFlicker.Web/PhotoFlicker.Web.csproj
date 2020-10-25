@@ -32,6 +32,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PhotoFlicker.Application\PhotoFlicker.Application.csproj" />
       <ProjectReference Include="..\PhotoFlicker.Dal\PhotoFlicker.Dal.csproj" />
       <ProjectReference Include="..\PhotoFlicker.Models\PhotoFlicker.Models.csproj" />
     </ItemGroup>

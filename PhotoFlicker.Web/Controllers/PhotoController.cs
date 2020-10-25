@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PhotoFlicker.Application.Repository.Page;
 using PhotoFlicker.Models;
 using PhotoFlicker.Models.Models;
-using PhotoFlicker.Web.Db.Repository.Page;
 
 namespace PhotoFlicker.Web.Controllers
 {

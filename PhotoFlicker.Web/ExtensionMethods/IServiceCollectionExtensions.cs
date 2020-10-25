@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
-using PhotoFlicker.Web.Db.Repository.Page;
-using PhotoFlicker.Web.Db.Repository.Tag;
+using PhotoFlicker.Application.Repository.Page;
+using PhotoFlicker.Application.Repository.Tag;
 
 namespace PhotoFlicker.Web.ExtensionMethods
 {

@@ -1,6 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
-using PhotoFlicker.Web.Db.Context;
+using PhotoFlicker.Application.Context;
 
 namespace PhotoFlicker.Tests
 {

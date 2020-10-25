@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using PhotoFlicker.Web.Db.Context;
+using PhotoFlicker.Application.Context;
 
 namespace PhotoFlicker.Web.Migrations
 {
@@ -18,7 +18,7 @@ namespace PhotoFlicker.Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63)
                 .HasAnnotation("ProductVersion", "5.0.0-rc.2.20475.6");
 
-            modelBuilder.Entity("PhotoFlicker.Models.Photo", b =>
+            modelBuilder.Entity("PhotoFlicker.Models.Models.Photo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,7 @@ namespace PhotoFlicker.Web.Migrations
                     b.ToTable("PhotoItems");
                 });
 
-            modelBuilder.Entity("PhotoFlicker.Models.Tag", b =>
+            modelBuilder.Entity("PhotoFlicker.Models.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,13 +68,13 @@ namespace PhotoFlicker.Web.Migrations
 
             modelBuilder.Entity("PhotoTag", b =>
                 {
-                    b.HasOne("PhotoFlicker.Models.Photo", null)
+                    b.HasOne("PhotoFlicker.Models.Models.Photo", null)
                         .WithMany()
                         .HasForeignKey("PhotosId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PhotoFlicker.Models.Tag", null)
+                    b.HasOne("PhotoFlicker.Models.Models.Tag", null)
                         .WithMany()
                         .HasForeignKey("TagsId")
                         .OnDelete(DeleteBehavior.Cascade)

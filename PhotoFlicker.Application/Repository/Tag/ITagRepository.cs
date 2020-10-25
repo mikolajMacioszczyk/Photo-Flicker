@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PhotoFlicker.Web.Db.Repository.Tag
+namespace PhotoFlicker.Application.Repository.Tag
 {
     public interface ITagRepository
     {

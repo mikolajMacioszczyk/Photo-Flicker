@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PhotoFlicker.Application.Context;
 using PhotoFlicker.Models.Profiles;
-using PhotoFlicker.Web.Db.Context;
 using PhotoFlicker.Web.ExtensionMethods;
 
 namespace PhotoFlicker.Web
@@ -25,7 +25,8 @@ namespace PhotoFlicker.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PhotoFlickerContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"),
+                    x => x.MigrationsAssembly("PhotoFlicker.Web")));
             
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

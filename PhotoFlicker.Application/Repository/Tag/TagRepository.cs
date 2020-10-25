@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PhotoFlicker.Web.Db.Context;
+using PhotoFlicker.Application.Context;
 
-namespace PhotoFlicker.Web.Db.Repository.Tag
+namespace PhotoFlicker.Application.Repository.Tag
 {
     public class TagRepository : ITagRepository
     {

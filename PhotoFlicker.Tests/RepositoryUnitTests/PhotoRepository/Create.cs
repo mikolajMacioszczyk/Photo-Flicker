@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using PhotoFlicker.Application.Context;
 using PhotoFlicker.Models;
 using PhotoFlicker.Models.Models;
-using PhotoFlicker.Web.Db.Context;
 
 namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
 {
@@ -30,7 +30,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Page.PhotoRepository(context);
 
             //act
             var result = await repository.Create(null);
@@ -48,7 +48,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Page.PhotoRepository(context);
             var toCreate = new Photo()
             {
                 Id = 1,
@@ -73,7 +73,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Page.PhotoRepository(context);
             var toCreate = new Photo()
             {
                 Path = "Test 1"
@@ -97,7 +97,7 @@ namespace PhotoFlicker.Tests.RepositoryUnitTests.PhotoRepository
         {    
             // arrange
             var context = await InitializeContext();
-            var repository = new Web.Db.Repository.Page.PhotoRepository(context);
+            var repository = new Application.Repository.Page.PhotoRepository(context);
             var toCreate = new Photo()
             {
                 Path = "Test 1",

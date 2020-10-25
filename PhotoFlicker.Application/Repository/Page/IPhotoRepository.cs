@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PhotoFlicker.Models;
 using PhotoFlicker.Models.Models;
 
-namespace PhotoFlicker.Web.Db.Repository.Page
+namespace PhotoFlicker.Application.Repository.Page
 {
     public interface IPhotoRepository
     {

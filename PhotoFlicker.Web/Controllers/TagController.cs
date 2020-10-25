@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using PhotoFlicker.Application.Repository.Tag;
 using PhotoFlicker.Models;
 using PhotoFlicker.Models.Models;
-using PhotoFlicker.Web.Db.Repository.Tag;
 
 namespace PhotoFlicker.Web.Controllers
 {

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PhotoFlicker.Models;
+using PhotoFlicker.Application.Context;
 using PhotoFlicker.Models.Models;
-using PhotoFlicker.Web.Db.Context;
 
-namespace PhotoFlicker.Web.Db.Repository.Page
+namespace PhotoFlicker.Application.Repository.Page
 {
     public class PhotoRepository : IPhotoRepository
     {
