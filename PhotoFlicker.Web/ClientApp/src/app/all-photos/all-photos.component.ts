@@ -44,11 +44,8 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
     this.subscription.add(
     this.tagService.isTagExists(tag).subscribe( isExist =>
     {
-      console.log("Dupa")
-
       if (isExist){
         this.loadWithTag(tag);
-        this.tag = tag;
       }
       else {
         this.message = "Nie ma takiego tagu";
@@ -58,7 +55,21 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
     ));
   }
 
-  private loadWithTag(tag: string){
+  loadWithTag(tag: string){
+    this.subscription.add(
+      this.tagService.getByName(tag).subscribe((tagFromDb: ITag) =>{
+        let idx = tagFromDb.id;
+        this.subscription.add(
+          this.photoService.takeWhereTag(idx, this.pageSize).subscribe(photos => {
+            this.photos = photos;
+            this.tag = tag;
+          })
+        )
+      })
+    )
+  }
+
+  routToNewPhoto() {
 
   }
 }

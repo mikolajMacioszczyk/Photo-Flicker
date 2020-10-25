@@ -39,6 +39,6 @@ export class TagService {
   }
 
   createTag(tag: ITag): Observable<any>{
-    return this.http.post(this.baseUrl+"create", {created: tag});
+    return this.http.post(this.baseUrl+"create", tag);
   }
 }

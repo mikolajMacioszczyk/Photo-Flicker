@@ -1,0 +1,41 @@
+.tag-selector {
+  background: #222;
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+  color: #eee;
+  font-size: 30px;
+  font-family: 'Cookie', cursive;
+  position: relative;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.tag-selector  .circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.tag-selector :hover {
+  background: transparent;
+}
+
+.tag-selector:hover .circle {
+  height: 50px;
+  width: 150px;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}

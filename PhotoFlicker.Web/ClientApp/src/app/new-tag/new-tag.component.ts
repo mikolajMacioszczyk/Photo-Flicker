@@ -36,11 +36,11 @@ export class NewTagComponent implements OnInit {
   }
 
   submit() {
-    this.tagName = "";
     this.subscription.add(
       this.service.createTag(new Tag(this.tagName))
         .subscribe(res => {
           if (res){
+            this.tagName = "";
             this.router.navigate(['photos']);
           }
         }, error => {console.log(error)})

@@ -1,14 +1,22 @@
+
+<button class="btn btn-success float-right" (click)="routToNewPhoto()">Dodaj Zdjęcie</button>
+<br /><br />
+
+<h1> Polecane tagi</h1>
+<div class="d-flex justify-content-around mt-2 mb-4">
+  <div class="tag-selector" *ngFor="let recommended of recommendedTags"
+    (click)="loadWithTag(recommended.name)">
+    {{recommended.name}}<div class="circle"></div>
+  </div>
+</div>
+
 <div class="d-flex">
   <input id="searchTag" type="text" #searchTag >
   <button type="button" (click)="search(searchTag.value)">Search</button>
   <label for="searchTag">{{message}}</label>
 </div>
-<h1> Polecane tagi</h1>
-<ul>
-  <li *ngFor="let recommended of recommendedTags">{{recommended.name}}</li>
-</ul>
 
-<div class="d-flex justify-content-center"><h1 *ngIf="tag">{{tag}}:</h1></div>
+<div class="d-flex justify-content-center"><h1 *ngIf="tag">{{tag}}</h1></div>
 <div class="row">
   <div *ngFor="let photo of photos" class="col-md-6 col-lg-4">
     <img class="card-img-top w-100" [src]="photo.path" alt="">
