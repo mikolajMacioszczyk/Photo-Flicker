@@ -69,7 +69,4 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
     )
   }
 
-  routToNewPhoto() {
-
-  }
 }

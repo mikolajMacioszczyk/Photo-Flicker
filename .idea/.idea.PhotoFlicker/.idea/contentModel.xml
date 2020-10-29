@@ -257,6 +257,7 @@
             <e p="app" t="Include">
               <e p="Common" t="Include">
                 <e p="Validators" t="Include">
+                  <e p="photUrlExistValidator.ts" t="Include" />
                   <e p="uniqueTagValidator.ts" t="Include" />
                 </e>
               </e>

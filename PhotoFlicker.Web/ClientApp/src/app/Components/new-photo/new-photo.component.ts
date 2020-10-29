@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ITag} from "../../Models/Tag";
-import {IPhoto} from "../../Models/Photo";
+import {photoUrlExistValidator} from "../../Common/Validators/photUrlExistValidator";
 
 @Component({
   selector: 'app-new-photo',
@@ -9,23 +8,23 @@ import {IPhoto} from "../../Models/Photo";
   styleUrls: ['./new-photo.component.css']
 })
 export class NewPhotoComponent implements OnInit {
+  url: string;
   form = new FormGroup({
-    path: new FormControl('', [Validators.required]),
+    photoUrl: new FormControl('', [Validators.required], [photoUrlExistValidator()]),
   })
 
   constructor() { }
 
+  get photoUrl(){
+    return this.form.get('photoUrl');
+  }
+
   ngOnInit() {
   }
 
-}
+  submit() {
 
-class Photo implements IPhoto{
-  id: number;
-  path: string;
-  tags: ITag[];
-
-  constructor() {
-    this.tags = [];
   }
 }
+
+

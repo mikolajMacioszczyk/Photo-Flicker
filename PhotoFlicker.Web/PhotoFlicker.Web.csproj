@@ -38,7 +38,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ClientApp\src\app\Common\Validators" />
       <Folder Include="ClientApp\src\app\Components" />
     </ItemGroup>
 

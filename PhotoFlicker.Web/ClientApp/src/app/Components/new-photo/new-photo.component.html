@@ -1,1 +1,24 @@
-<p>new-photo works!</p>
+<h1 class="title">Dodaj nowy zdjęcie!</h1>
+
+<div class="row">
+  <div class="col-6">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div>
+        <label for="url">Url Zdjęcia: </label>
+        <input id="url" type="text"
+               [(ngModel)]="url"
+               name="photoUrl"
+               formControlName="photoUrl"
+               class="form-control">
+        <div class="text-danger" *ngIf="photoUrl.touched && photoUrl.invalid">
+          <div *ngIf="photoUrl.errors.required">Wpisz ścieżkę url zdjęcia, które chcesz dodać</div>
+          <div *ngIf="!photoUrl.errors.photoUrlExistValidator">Nie udało się znaleźć zdjęcia, które chcesz dodać</div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-6">
+
+  </div>
+</div>
