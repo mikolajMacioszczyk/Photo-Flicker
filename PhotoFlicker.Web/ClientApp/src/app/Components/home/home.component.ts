@@ -1,7 +1,7 @@
 import {Component, OnDestroy} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {TagService} from "../Services/tag.service";
+import {TagService} from "../../Services/tag.service";
 import {Subscription} from "rxjs";
 
 @Component({

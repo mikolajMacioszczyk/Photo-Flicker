@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {PhotoService} from "../Services/photo.service";
-import {IPhoto} from "../Models/Photo";
+import {PhotoService} from "../../Services/photo.service";
+import {IPhoto} from "../../Models/Photo";
 import {Subscription} from "rxjs";
-import {TagService} from "../Services/tag.service";
-import {ITag} from "../Models/Tag";
+import {TagService} from "../../Services/tag.service";
+import {ITag} from "../../Models/Tag";
 
 @Component({
   selector: 'app-all-photos',

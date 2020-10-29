@@ -8,18 +8,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
 import {PhotoService} from "./Services/photo.service";
 import {TagService} from "./Services/tag.service";
-import { PhotoSliderComponent } from './photo-slider/photo-slider.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AllPhotosComponent } from './all-photos/all-photos.component';
-import { NewPhotoComponent } from './new-photo/new-photo.component';
-import { NewTagComponent } from './new-tag/new-tag.component';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HomeComponent} from "./Components/home/home.component";
+import {AllPhotosComponent} from "./Components/all-photos/all-photos.component";
+import {NavMenuComponent} from "./Components/nav-menu/nav-menu.component";
+import {NewPhotoComponent} from "./Components/new-photo/new-photo.component";
+import {NewTagComponent} from "./Components/new-tag/new-tag.component";
+import {NotFoundComponent} from "./Components/not-found/not-found.component";
+import {PhotoSliderComponent} from "./Components/photo-slider/photo-slider.component";
 
 @NgModule({
   declarations: [

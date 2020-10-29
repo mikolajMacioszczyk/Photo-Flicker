@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ITag} from "../Models/Tag";
-import {IPhoto} from "../Models/Photo";
+import {ITag} from "../../Models/Tag";
+import {IPhoto} from "../../Models/Photo";
 
 @Component({
   selector: 'app-new-photo',

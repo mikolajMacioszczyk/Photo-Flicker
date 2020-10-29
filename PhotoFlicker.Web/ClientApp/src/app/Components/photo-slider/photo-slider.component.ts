@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {PhotoService} from "../Services/photo.service";
+import {PhotoService} from "../../Services/photo.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {IPhoto} from "../Models/Photo";
+import {IPhoto} from "../../Models/Photo";
 import {Subscription} from "rxjs";
-import {ITag} from "../Models/Tag";
-import {TagService} from "../Services/tag.service";
+import {ITag} from "../../Models/Tag";
+import {TagService} from "../../Services/tag.service";
 
 @Component({
   selector: 'app-photo-slider',

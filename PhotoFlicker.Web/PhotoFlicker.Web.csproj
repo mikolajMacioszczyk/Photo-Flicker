@@ -39,6 +39,7 @@
 
     <ItemGroup>
       <Folder Include="ClientApp\src\app\Common\Validators" />
+      <Folder Include="ClientApp\src\app\Components" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

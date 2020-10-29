@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {uniqueTagName} from "../Common/Validators/uniqueTagValidator";
-import {TagService} from "../Services/tag.service";
+import {uniqueTagName} from "../../Common/Validators/uniqueTagValidator";
+import {TagService} from "../../Services/tag.service";
 import {Subscription} from "rxjs";
-import {ITag} from "../Models/Tag";
-import {IPhoto} from "../Models/Photo";
+import {ITag} from "../../Models/Tag";
+import {IPhoto} from "../../Models/Photo";
 import {Router} from "@angular/router";
 
 @Component({

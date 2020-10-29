@@ -260,6 +260,43 @@
                   <e p="uniqueTagValidator.ts" t="Include" />
                 </e>
               </e>
+              <e p="Components" t="Include">
+                <e p="all-photos" t="Include">
+                  <e p="all-photos.component.css" t="Include" />
+                  <e p="all-photos.component.html" t="Include" />
+                  <e p="all-photos.component.ts" t="Include" />
+                </e>
+                <e p="home" t="Include">
+                  <e p="home.component.css" t="Include" />
+                  <e p="home.component.html" t="Include" />
+                  <e p="home.component.ts" t="Include" />
+                </e>
+                <e p="nav-menu" t="Include">
+                  <e p="nav-menu.component.css" t="Include" />
+                  <e p="nav-menu.component.html" t="Include" />
+                  <e p="nav-menu.component.ts" t="Include" />
+                </e>
+                <e p="new-photo" t="Include">
+                  <e p="new-photo.component.css" t="Include" />
+                  <e p="new-photo.component.html" t="Include" />
+                  <e p="new-photo.component.ts" t="Include" />
+                </e>
+                <e p="new-tag" t="Include">
+                  <e p="new-tag.component.css" t="Include" />
+                  <e p="new-tag.component.html" t="Include" />
+                  <e p="new-tag.component.ts" t="Include" />
+                </e>
+                <e p="not-found" t="Include">
+                  <e p="not-found.component.css" t="Include" />
+                  <e p="not-found.component.html" t="Include" />
+                  <e p="not-found.component.ts" t="Include" />
+                </e>
+                <e p="photo-slider" t="Include">
+                  <e p="photo-slider.component.css" t="Include" />
+                  <e p="photo-slider.component.html" t="Include" />
+                  <e p="photo-slider.component.ts" t="Include" />
+                </e>
+              </e>
               <e p="Models" t="Include">
                 <e p="Photo.ts" t="Include" />
                 <e p="Tag.ts" t="Include" />
@@ -270,50 +307,10 @@
                 <e p="tag.service.spec.ts" t="Include" />
                 <e p="tag.service.ts" t="Include" />
               </e>
-              <e p="all-photos" t="Include">
-                <e p="all-photos.component.css" t="Include" />
-                <e p="all-photos.component.html" t="Include" />
-                <e p="all-photos.component.spec.ts" t="Include" />
-                <e p="all-photos.component.ts" t="Include" />
-              </e>
               <e p="app.component.html" t="Include" />
               <e p="app.component.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
               <e p="app.server.module.ts" t="Include" />
-              <e p="home" t="Include">
-                <e p="home.component.css" t="Include" />
-                <e p="home.component.html" t="Include" />
-                <e p="home.component.ts" t="Include" />
-              </e>
-              <e p="nav-menu" t="Include">
-                <e p="nav-menu.component.css" t="Include" />
-                <e p="nav-menu.component.html" t="Include" />
-                <e p="nav-menu.component.ts" t="Include" />
-              </e>
-              <e p="new-photo" t="Include">
-                <e p="new-photo.component.css" t="Include" />
-                <e p="new-photo.component.html" t="Include" />
-                <e p="new-photo.component.spec.ts" t="Include" />
-                <e p="new-photo.component.ts" t="Include" />
-              </e>
-              <e p="new-tag" t="Include">
-                <e p="new-tag.component.css" t="Include" />
-                <e p="new-tag.component.html" t="Include" />
-                <e p="new-tag.component.spec.ts" t="Include" />
-                <e p="new-tag.component.ts" t="Include" />
-              </e>
-              <e p="not-found" t="Include">
-                <e p="not-found.component.css" t="Include" />
-                <e p="not-found.component.html" t="Include" />
-                <e p="not-found.component.spec.ts" t="Include" />
-                <e p="not-found.component.ts" t="Include" />
-              </e>
-              <e p="photo-slider" t="Include">
-                <e p="photo-slider.component.css" t="Include" />
-                <e p="photo-slider.component.html" t="Include" />
-                <e p="photo-slider.component.spec.ts" t="Include" />
-                <e p="photo-slider.component.ts" t="Include" />
-              </e>
             </e>
             <e p="assets" t="Include">
               <e p=".gitkeep" t="Include" />
