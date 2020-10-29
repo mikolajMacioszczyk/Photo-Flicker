@@ -13,16 +13,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Extract dictionary for Components">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Add photo url validator">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/PhotoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/PhotoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/PhotoFlicker.Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +35,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/Program.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/nav-menu/nav-menu.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/new-tag/new-tag.component.css" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Tests/RepositoryUnitTests/TagRepository/Read.cs" />
@@ -81,15 +76,16 @@
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-tag/new-tag.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.ts" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Photo/PhotoRepository.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Common/Validators/someValidator.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.css" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Common/Validators/photUrlExistValidator.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/new-photo/new-photo.component.ts" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Common/Validators/photUrlExistValidator.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Services/photo.service.ts" />
       </list>
     </option>
   </component>
@@ -169,7 +165,7 @@
       <workItem from="1603577612046" duration="21000" />
       <workItem from="1603581608159" duration="3787000" />
       <workItem from="1603649975796" duration="5069000" />
-      <workItem from="1603998323344" duration="9006000" />
+      <workItem from="1603998323344" duration="11481000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602836435958</created>
@@ -262,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603999014020</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add photo url validator">
+      <created>1604011498952</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604011498952</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +298,8 @@
     <MESSAGE value="Add Services" />
     <MESSAGE value="Add tabs" />
     <MESSAGE value="Extract dictionary for Components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extract dictionary for Components" />
+    <MESSAGE value="Add photo url validator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add photo url validator" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="188" width="832" height="711" key="#Inspection_severity" timestamp="1603462467355">
@@ -451,10 +455,10 @@
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
     <state x="717" y="219" width="475" height="625" key="RollbackChangesDialog/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1604001519497" />
-    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603655626513">
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604011504016">
       <screen x="0" y="27" width="1920" height="1003" />
     </state>
-    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1603655626513" />
+    <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@0.27.1920.1003" timestamp="1604011504016" />
     <state x="2475" y="268" key="Vcs.Push.Dialog.v2/0.27.1920.1003/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603585392716" />
     <state x="555" y="276" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.27.1920.1003@0.27.1920.1003" timestamp="1602885942708" />
     <state x="1920" y="0" width="1347" height="959" maximized="true" key="dock-window-1" timestamp="1603998671768">

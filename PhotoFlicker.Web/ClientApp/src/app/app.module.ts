@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
 import {PhotoService} from "./Services/photo.service";
 import {TagService} from "./Services/tag.service";
 
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {TextFieldModule} from '@angular/cdk/text-field';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HomeComponent} from "./Components/home/home.component";
 import {AllPhotosComponent} from "./Components/all-photos/all-photos.component";
@@ -20,6 +21,8 @@ import {NewPhotoComponent} from "./Components/new-photo/new-photo.component";
 import {NewTagComponent} from "./Components/new-tag/new-tag.component";
 import {NotFoundComponent} from "./Components/not-found/not-found.component";
 import {PhotoSliderComponent} from "./Components/photo-slider/photo-slider.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -33,20 +36,22 @@ import {PhotoSliderComponent} from "./Components/photo-slider/photo-slider.compo
     NewTagComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'slider/:tag/:time', component: PhotoSliderComponent },
-      { path: 'photos', component: AllPhotosComponent },
-      { path: 'photos/new', component: NewPhotoComponent },
-      { path: 'tags/new', component: NewTagComponent },
-      { path: '**', component: NotFoundComponent },
+      {path: '', component: HomeComponent},
+      {path: 'slider/:tag/:time', component: PhotoSliderComponent},
+      {path: 'photos', component: AllPhotosComponent},
+      {path: 'photos/new', component: NewPhotoComponent},
+      {path: 'tags/new', component: NewTagComponent},
+      {path: '**', component: NotFoundComponent},
     ]),
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    TextFieldModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [PhotoService, TagService],
   bootstrap: [AppComponent]

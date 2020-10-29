@@ -301,6 +301,7 @@
               <e p="Models" t="Include">
                 <e p="Photo.ts" t="Include" />
                 <e p="Tag.ts" t="Include" />
+                <e p="UrlAndString.ts" t="Include" />
               </e>
               <e p="Services" t="Include">
                 <e p="photo.service.spec.ts" t="Include" />
