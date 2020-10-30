@@ -13,18 +13,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Photo Panel with serve unexisted tags">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhotoFlicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/nav-menu/nav-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/nav-menu/nav-menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" afterDir="false" />
+    <list default="true" id="1c12fdca-782f-497d-8ffa-5da16262e7a9" name="Default Changelist" comment="Before changing model">
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Models/Models/Photo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Models/Models/Photo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/PhotoFlickerContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PhotoFlicker.Web/Migrations/PhotoFlickerContextModelSnapshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +33,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/PhotoFlicker.Models/Profiles/TagProfile.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Class1.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Context/PhotoFlickerContext.cs" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Application/Repository/Page/IPhotoRepository.cs" />
@@ -87,12 +77,13 @@
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/all-photos/all-photos.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.html" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/nav-menu/nav-menu.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.css" />
-        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.html" />
         <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Web/ClientApp/src/app/Components/photo-slider/photo-slider.component.ts" />
+        <option value="$PROJECT_DIR$/PhotoFlicker.Models/Models/Photo.cs" />
       </list>
     </option>
   </component>
@@ -175,7 +166,7 @@
       <workItem from="1603649975796" duration="5069000" />
       <workItem from="1603998323344" duration="11481000" />
       <workItem from="1604047143183" duration="10196000" />
-      <workItem from="1604057464417" duration="17406000" />
+      <workItem from="1604057464417" duration="17777000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1602836435958</created>
@@ -310,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604072205881</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Before changing model">
+      <created>1604076635734</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1604076635734</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +347,8 @@
     <MESSAGE value="Valid tags as plain tect communication fronted with backend" />
     <MESSAGE value="Rename Model" />
     <MESSAGE value="Photo Panel with serve unexisted tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Photo Panel with serve unexisted tags" />
+    <MESSAGE value="Before changing model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before changing model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="539" y="188" width="832" height="711" key="#Inspection_severity" timestamp="1603462467355">

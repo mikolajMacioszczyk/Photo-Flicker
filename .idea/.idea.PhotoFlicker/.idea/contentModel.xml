@@ -361,6 +361,8 @@
           <e p="20201016181234_RemoveManyToManyConnectionBetweenPhotosAndTags.cs" t="Include" />
           <e p="20201016182532_BackToManyToManyRelationship.Designer.cs" t="Include" />
           <e p="20201016182532_BackToManyToManyRelationship.cs" t="Include" />
+          <e p="20201030165233_AddDescriptionColumnToPhotoTable.Designer.cs" t="Include" />
+          <e p="20201030165233_AddDescriptionColumnToPhotoTable.cs" t="Include" />
           <e p="PhotoFlickerContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Pages" t="Include">
