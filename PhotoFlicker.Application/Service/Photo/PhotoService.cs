@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using PhotoFlicker.Application.Repository.Photo;
 using PhotoFlicker.Models.Dtos.Photo;
+using PhotoFlicker.Models.ViewModels;
 
 namespace PhotoFlicker.Application.Service.Photo
 {
@@ -101,11 +102,11 @@ namespace PhotoFlicker.Application.Service.Photo
             return await _repository.IsTagExist(tagId);
         }
 
-        public async Task<(bool, string[])> ValidateTasksAsPlainText(string text)
+        public async Task<ValidInfoAndNoValidValues<string>> ValidateTasksAsPlainText(string text)
         {
             if (string.IsNullOrEmpty(text))
             {
-                return (true, new string[]{ });
+                return new ValidInfoAndNoValidValues<string>(){IsValid = true, InvalidValues = new string[]{}};
             }
             
             var splitted = text.Split('#')
@@ -117,9 +118,9 @@ namespace PhotoFlicker.Application.Service.Photo
 
             if (splitted.Count > 0)
             {
-                return (false, splitted.ToArray());
+                return new ValidInfoAndNoValidValues<string>(){IsValid = false, InvalidValues = splitted.ToArray()};
             }
-            return (true, new string[] { });
+            return new ValidInfoAndNoValidValues<string>(){IsValid = true, InvalidValues = new string[]{}};
         }
 
         private void RemoveFromList(List<string> baseList, string[] toRemove)

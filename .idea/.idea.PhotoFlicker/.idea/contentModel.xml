@@ -68,6 +68,7 @@
         </e>
         <e p="ViewModels" t="Include">
           <e p="TextViewModel.cs" t="Include" />
+          <e p="UrlAndPlanTextViewModel.cs" t="Include" />
           <e p="ValidInfoAndNoValidValues.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />

@@ -64,8 +64,15 @@ namespace PhotoFlicker.Web.Controllers
         public async Task<ActionResult<ValidInfoAndNoValidValues<string>>> ValidateTagsAsPlainText([FromBody] TextViewModel text)
         {
             var result = await _service.ValidateTasksAsPlainText(text.Text);
-            return Ok(new ValidInfoAndNoValidValues<string>(){IsValid = result.Item1, NoValid = result.Item2});
+            return Ok(result);
         }
+
+        // [HttpPost]
+        // [Route("create")]
+        // public async Task<ActionResult<bool>> Create([FromBody] UrlAndPlanTextViewModel created)
+        // {
+        //     
+        // }
 
     }
 }

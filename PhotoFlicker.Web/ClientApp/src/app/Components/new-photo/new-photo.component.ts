@@ -37,12 +37,10 @@ export class NewPhotoComponent implements OnDestroy {
     this.subscription.add(
       this.validate().subscribe((res: ValidationTagOutput) => {
         if (res.isValid){
-          console.log("Jest git")
           //this.addPhotoToDatabase();
         }
         else {
-          console.log("Nie jest git", res.noValid);
-          this.invalidTags = res.noValid;
+          this.invalidTags = res.invalidValues;
         }
       })
     );
@@ -50,7 +48,7 @@ export class NewPhotoComponent implements OnDestroy {
 
   private addPhotoToDatabase(){
     this.subscription.add(
-    this.service.createPhoto({url: this.url, content: this.tagsText})
+    this.service.createPhoto({url: this.url, text: this.tagsText})
       .subscribe(res => {
         this.router.navigate(['photos'])
       }, error => {console.log(error)})

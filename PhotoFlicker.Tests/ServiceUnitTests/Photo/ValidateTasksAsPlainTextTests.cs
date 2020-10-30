@@ -37,9 +37,9 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
-            Assert.NotNull(result.Item2);
-            Assert.True(result.Item2.SequenceEqual(expected));
+            Assert.True(result.IsValid);
+            Assert.NotNull(result.InvalidValues);
+            Assert.True(result.InvalidValues.SequenceEqual(expected));
             
             //clean
             DisposeContext(context);
@@ -62,9 +62,9 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
-            Assert.NotNull(result.Item2);
-            Assert.True(result.Item2.SequenceEqual(expected));
+            Assert.True(result.IsValid);
+            Assert.NotNull(result.InvalidValues);
+            Assert.True(result.InvalidValues.SequenceEqual(expected));
             
             //clean
             DisposeContext(context);
@@ -87,9 +87,9 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
-            Assert.NotNull(result.Item2);
-            Assert.True(result.Item2.SequenceEqual(expected));
+            Assert.True(result.IsValid);
+            Assert.NotNull(result.InvalidValues);
+            Assert.True(result.InvalidValues.SequenceEqual(expected));
             
             //clean
             DisposeContext(context);
@@ -112,9 +112,9 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
-            Assert.NotNull(result.Item2);
-            Assert.True(result.Item2.SequenceEqual(expected));
+            Assert.True(result.IsValid);
+            Assert.NotNull(result.InvalidValues);
+            Assert.True(result.InvalidValues.SequenceEqual(expected));
             
             //clean
             DisposeContext(context);
@@ -134,11 +134,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2.OrderBy(s => s);
+            var resultCollection = result.InvalidValues.OrderBy(s => s);
 
             //assert
             Assert.NotNull(result);
-            Assert.False(result.Item1);
+            Assert.False(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             //clean
@@ -159,11 +159,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2.OrderBy(s => s);
+            var resultCollection = result.InvalidValues.OrderBy(s => s);
 
             //assert
             Assert.NotNull(result);
-            Assert.False(result.Item1);
+            Assert.False(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -185,11 +185,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2.OrderBy(s => s);
+            var resultCollection = result.InvalidValues.OrderBy(s => s);
 
             //assert
             Assert.NotNull(result);
-            Assert.False(result.Item1);
+            Assert.False(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -211,11 +211,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2.OrderBy(s => s);
+            var resultCollection = result.InvalidValues.OrderBy(s => s);
 
             //assert
             Assert.NotNull(result);
-            Assert.False(result.Item1);
+            Assert.False(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             //clean
@@ -236,11 +236,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2;
+            var resultCollection = result.InvalidValues;
 
             //assert
             Assert.NotNull(result);
-            Assert.False(result.Item1);
+            Assert.False(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -262,11 +262,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2;
+            var resultCollection = result.InvalidValues;
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
+            Assert.True(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -288,11 +288,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2;
+            var resultCollection = result.InvalidValues;
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
+            Assert.True(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -314,11 +314,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2;
+            var resultCollection = result.InvalidValues;
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
+            Assert.True(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             
@@ -340,11 +340,11 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             
             //act
             var result = await service.ValidateTasksAsPlainText(input);
-            var resultCollection = result.Item2;
+            var resultCollection = result.InvalidValues;
 
             //assert
             Assert.NotNull(result);
-            Assert.True(result.Item1);
+            Assert.True(result.IsValid);
             Assert.NotNull(resultCollection);
             Assert.True(resultCollection.SequenceEqual(expected));
             

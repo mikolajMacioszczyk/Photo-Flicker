@@ -8,6 +8,6 @@ namespace PhotoFlicker.Models.ViewModels
         [Required]
         public bool IsValid { get; set; }
 
-        public IEnumerable<T> NoValid { get; set; }
+        public IEnumerable<T> InvalidValues { get; set; }
     }
 }
