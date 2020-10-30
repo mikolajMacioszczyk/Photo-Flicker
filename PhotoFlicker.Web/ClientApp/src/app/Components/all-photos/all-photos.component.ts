@@ -22,15 +22,8 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
   constructor(private photoService: PhotoService, private tagService: TagService) { }
 
   ngOnInit() {
-    this.subscription.add(
-    this.photoService.take(this.pageSize).subscribe(photos => {
-      this.photos = photos;
-    }));
-    this.subscription.add(
-      this.tagService.getRandomTagNames(this.recommendedSize).subscribe(tags =>{
-        this.recommendedTags = tags;
-      })
-    )
+    this.loadFullList();
+    this.draw();
   }
 
   ngOnDestroy(): void {
@@ -66,4 +59,18 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
     )
   }
 
+  draw() {
+    this.subscription.add(
+      this.tagService.getRandomTagNames(this.recommendedSize).subscribe(tags =>{
+        this.recommendedTags = tags;
+      })
+    )
+  }
+
+  loadFullList() {
+    this.subscription.add(
+      this.photoService.take(this.pageSize).subscribe(photos => {
+        this.photos = photos;
+      }));
+  }
 }

@@ -12,6 +12,7 @@ import {PhotoService} from "./Services/photo.service";
 import {TagService} from "./Services/tag.service";
 
 import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HomeComponent} from "./Components/home/home.component";
@@ -36,24 +37,25 @@ import {MatButtonModule} from "@angular/material/button";
     NewPhotoComponent,
     NewTagComponent,
   ],
-    imports: [
-        BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-        RouterModule.forRoot([
-            {path: '', component: HomeComponent},
-            {path: 'slider/:tag/:time', component: PhotoSliderComponent},
-            {path: 'photos', component: AllPhotosComponent},
-            {path: 'photos/new', component: NewPhotoComponent},
-            {path: 'tags/new', component: NewTagComponent},
-            {path: '**', component: NotFoundComponent},
-        ]),
-        BrowserAnimationsModule,
-        TextFieldModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule
+  imports: [
+      BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+      HttpClientModule,
+      FormsModule,
+      ReactiveFormsModule,
+      RouterModule.forRoot([
+          {path: '', component: HomeComponent},
+          {path: 'slider/:tag/:time/:withDescription', component: PhotoSliderComponent},
+          {path: 'photos', component: AllPhotosComponent},
+          {path: 'photos/new', component: NewPhotoComponent},
+          {path: 'tags/new', component: NewTagComponent},
+          {path: '**', component: NotFoundComponent},
+      ]),
+      BrowserAnimationsModule,
+      TextFieldModule,
+      MatFormFieldModule,
+      MatInputModule,
+      MatCheckboxModule,
+      MatButtonModule,
     ],
   providers: [PhotoService, TagService],
   bootstrap: [AppComponent]

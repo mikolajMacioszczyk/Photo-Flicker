@@ -2,14 +2,22 @@ header{
   margin: 50px 0 0 0;
 }
 
-.time-panel{
-  margin: 20px 0 100px 0;
+.margined-panel{
+  margin: 20px 0 40px 30px;
 }
 
 .big-font{
   font-size: 60px;
 }
 
+.medium-font{
+  font-size: 35px;
+}
+
 .margin-10{
   margin: 10px;
+}
+
+.margin-y-10{
+  margin: 10px 0;
 }

@@ -1,11 +1,11 @@
 .tag-selector {
   background: #222;
-  height: 50px;
-  width: 150px;
+  height: 45px;
+  width: 130px;
   border: none;
   border-radius: 8px;
   color: #eee;
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Cookie', cursive;
   position: relative;
   transition: 1s;
@@ -33,9 +33,13 @@
 }
 
 .tag-selector:hover .circle {
-  height: 50px;
-  width: 150px;
+  height: 45px;
+  width: 130px;
   left: 0;
   border-radius: 0;
   border-bottom: 2px solid #eee;
+}
+
+.clickable{
+  cursor: pointer;
 }

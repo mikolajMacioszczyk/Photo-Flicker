@@ -4,14 +4,22 @@
   <h2 class="d-flex justify-content-end">Good luck!</h2>
 </header>
 
-<div class="d-flex time-panel">
-  <p class="margin-10">Wybierz czas:</p>
+<div class="d-flex margined-panel h4">
+  <p class="margin-y-10">Wybierz czas:</p>
   <button class="btn btn-sm btn-secondary margin-10" (click)="time = 1" >test</button>
   <button class="btn btn-sm btn-secondary margin-10" (click)="time = 15" >15</button>
   <button class="btn btn-sm btn-secondary margin-10" (click)="time = 30" >30</button>
   <button class="btn btn-sm btn-secondary margin-10" (click)="time = 50" >50</button>
 </div>
 
+<div class="margined-panel h4">
+  <section>
+    <mat-checkbox color="primary"
+                  [(ngModel)]="withDescription"
+    ></mat-checkbox>
+    Wyświetl opis zdjęcia
+  </section>
+</div>
 
 <form class="d-flex justify-content-between" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group my-auto">

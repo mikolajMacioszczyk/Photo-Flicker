@@ -12,13 +12,14 @@ import {TagService} from "../../Services/tag.service";
   styleUrls: ['./photo-slider.component.css']
 })
 export class PhotoSliderComponent implements OnInit, OnDestroy {
-  currentPhoto: IPhoto = new Photo();
+  currentPhoto: IPhoto = {id: -1, path: "https://www.nycgirlinpearls.com/wp-content/uploads/2017/01/15fe8848c0da0cd2274cce9a0db04b34.jpg", tags: []};
   isEnd: boolean = false;
   tag: string;
   private time: number;
   private photos: IPhoto[] = [];
   private interval: number;
   private subscription = new Subscription();
+  private withDescription: boolean = true;
 
   constructor(private photoService: PhotoService,
               private tagService: TagService,
@@ -30,6 +31,7 @@ export class PhotoSliderComponent implements OnInit, OnDestroy {
       this.route.params.subscribe(params =>{
         this.tag = params['tag'];
         this.time = params['time'];
+        this.withDescription = params['withDescription'] != 0;
       this.readDataFromService()
     }));
   }
@@ -64,7 +66,8 @@ export class PhotoSliderComponent implements OnInit, OnDestroy {
   }
 
   tryAgain() {
-    this.router.navigate(['slider',this.tag, this.time])
+    this.isEnd = false;
+    this.display();
   }
 
   backHome() {

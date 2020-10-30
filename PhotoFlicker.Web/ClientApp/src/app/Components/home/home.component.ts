@@ -13,6 +13,7 @@ export class HomeComponent implements OnDestroy{
   tag: string;
   time: number = 30;
   message: string;
+  withDescription: boolean = true;
   private subscription = new Subscription();
   form = new FormGroup({
     searchTag: new FormControl('', [Validators.required, Validators.maxLength(50)])
@@ -25,7 +26,7 @@ export class HomeComponent implements OnDestroy{
     this.subscription.add(
       this.service.isTagExists(this.tag).subscribe((isExist: boolean) => {
         if (isExist){
-          this.router.navigate(['slider', this.tag, this.time*1000]);
+          this.router.navigate(['slider', this.tag, this.time*1000, this.withDescription ? 1 : 0]);
         }
         else {
           this.message = "Nie mogę znaleźć tagu o nazwie \""+ this.tag+ "\"";
