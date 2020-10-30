@@ -8,7 +8,7 @@ import {UrlAndTagsAsPlainText} from "../Models/UrlAndString";
   providedIn: 'root'
 })
 export class PhotoService {
-  private baseUrl: string;
+  private readonly baseUrl: string;
 
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.baseUrl = baseUrl + "api/photo/";
@@ -23,7 +23,7 @@ export class PhotoService {
   }
 
   validateTagsAsPlainText(text: string): Observable<any>{
-    return this.http.post<any>(this.baseUrl+"validate", text);
+    return this.http.post<any>(this.baseUrl+"validate", {text: text});
   }
 
   createPhoto(created: UrlAndTagsAsPlainText): Observable<any>{

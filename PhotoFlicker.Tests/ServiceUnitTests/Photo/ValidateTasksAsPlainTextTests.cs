@@ -325,6 +325,32 @@ namespace PhotoFlicker.Tests.ServiceUnitTests.Photo
             //clean
             DisposeContext(context);
         }
+        
+        [Test]
+        public async Task ValidateTasksAsPlainText_DuplicateValues_ButWithDifferentCases_ShouldReturnTrue()
+        {
+            // arrange
+            var context = await InitializeContext();
+            var repository = new PhotoRepository(context);
+
+            var expected = new string[]{};
+            var input = "#Berlin #berlin";
+
+            var service = new PhotoService(repository, CreateMapper());
+            
+            //act
+            var result = await service.ValidateTasksAsPlainText(input);
+            var resultCollection = result.Item2;
+
+            //assert
+            Assert.NotNull(result);
+            Assert.True(result.Item1);
+            Assert.NotNull(resultCollection);
+            Assert.True(resultCollection.SequenceEqual(expected));
+            
+            //clean
+            DisposeContext(context);
+        }
 
         private IMapper CreateMapper()
         {

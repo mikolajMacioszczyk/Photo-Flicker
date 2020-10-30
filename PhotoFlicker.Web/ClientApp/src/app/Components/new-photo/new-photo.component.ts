@@ -14,10 +14,11 @@ import {ITag} from "../../Models/Tag";
 })
 export class NewPhotoComponent implements OnDestroy {
   url: string;
-  tags: string;
+  tagsText: string;
   invalidTags: string[];
   form = new FormGroup({
     photoUrl: new FormControl('', [Validators.required], [photoUrlExistValidator()]),
+    tags: new FormControl()
   })
   private subscription = new Subscription();
 
@@ -27,13 +28,20 @@ export class NewPhotoComponent implements OnDestroy {
     return this.form.get('photoUrl');
   }
 
+  get tags(){
+    return this.form.get('tags');
+  }
+
   submit() {
+    this.invalidTags = [];
     this.subscription.add(
       this.validate().subscribe((res: ValidationTagOutput) => {
         if (res.isValid){
-          this.addPhotoToDatabase();
+          console.log("Jest git")
+          //this.addPhotoToDatabase();
         }
         else {
+          console.log("Nie jest git", res.noValid);
           this.invalidTags = res.noValid;
         }
       })
@@ -42,7 +50,7 @@ export class NewPhotoComponent implements OnDestroy {
 
   private addPhotoToDatabase(){
     this.subscription.add(
-    this.service.createPhoto({url: this.url, content: this.tags})
+    this.service.createPhoto({url: this.url, content: this.tagsText})
       .subscribe(res => {
         this.router.navigate(['photos'])
       }, error => {console.log(error)})
@@ -50,7 +58,7 @@ export class NewPhotoComponent implements OnDestroy {
   }
 
   private validate(): Observable<any>{
-    return this.service.validateTagsAsPlainText(this.tags);
+    return this.service.validateTagsAsPlainText(this.tagsText);
   }
 
   ngOnDestroy(): void {

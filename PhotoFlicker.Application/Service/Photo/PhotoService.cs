@@ -112,19 +112,27 @@ namespace PhotoFlicker.Application.Service.Photo
                 .Select(s => s.Trim())
                 .Where(s => !string.IsNullOrEmpty(s))
                 .Distinct().ToList();
-            
-            var existedInDb = await _repository.FilterByExistence(splitted);
-            foreach (var lowerCaseTagName in existedInDb)
-            {
-                var originalTagName = splitted.First(s => s.ToLower().Equals(lowerCaseTagName));
-                splitted.Remove(originalTagName);
-            }
+
+            RemoveFromList(splitted, await _repository.FilterByExistence(splitted));
 
             if (splitted.Count > 0)
             {
                 return (false, splitted.ToArray());
             }
             return (true, new string[] { });
+        }
+
+        private void RemoveFromList(List<string> baseList, string[] toRemove)
+        {
+            foreach (var lowerCaseTagName in toRemove)
+            {
+                var originalTagName = baseList.FirstOrDefault(s => s.ToLower().Equals(lowerCaseTagName));
+                while (originalTagName != null)
+                {
+                    baseList.Remove(originalTagName);
+                    originalTagName = baseList.FirstOrDefault(s => s.ToLower().Equals(lowerCaseTagName));
+                }
+            }
         }
 
         public async Task SaveChanges()

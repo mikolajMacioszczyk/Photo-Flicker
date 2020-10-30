@@ -28,7 +28,9 @@
       </label>
       <mat-form-field class="w-100 mr-5">
         <textarea matInput
-                  [(ngModel)]="tags"
+                  [(ngModel)]="tagsText"
+                  name="tags"
+                  formControlName="tags"
                   id="tagsTextArea"
                   cdkTextareaAutosize
                   cdkAutosizeMinRows="2"

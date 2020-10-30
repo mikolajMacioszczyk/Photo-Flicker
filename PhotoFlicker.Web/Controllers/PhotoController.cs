@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PhotoFlicker.Application.Service.Photo;
 using PhotoFlicker.Models.Dtos.Photo;
 using PhotoFlicker.Models.Dtos.Tag;
+using PhotoFlicker.Models.ViewModels;
 
 namespace PhotoFlicker.Web.Controllers
 {
@@ -60,14 +61,10 @@ namespace PhotoFlicker.Web.Controllers
 
         [HttpPost]
         [Route("validate")]
-        public async Task<ActionResult<(bool, string[])>> ValidateTagsAsPlainText([FromBody] string text)
+        public async Task<ActionResult<ValidInfoAndNoValidValues<string>>> ValidateTagsAsPlainText([FromBody] TextViewModel text)
         {
-            var result = _service.ValidateTasksAsPlainText(text);
-            if (result != null)
-            {
-                return Ok(result);
-            }
-            return Problem();
+            var result = await _service.ValidateTasksAsPlainText(text.Text);
+            return Ok(new ValidInfoAndNoValidValues<string>(){IsValid = result.Item1, NoValid = result.Item2});
         }
 
     }
