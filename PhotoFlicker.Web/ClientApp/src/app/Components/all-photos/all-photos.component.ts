@@ -4,6 +4,7 @@ import {IPhoto} from "../../Models/Photo";
 import {Subscription} from "rxjs";
 import {TagService} from "../../Services/tag.service";
 import {ITag} from "../../Models/Tag";
+import {flatMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-all-photos',
@@ -15,9 +16,13 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
   recommendedTags: string[];
   message: string;
   tag = "Wszystkie:";
-  private subscription = new Subscription();
   private pageSize = 100;
   private recommendedSize = 5;
+
+  private isTagExistSubscription = new Subscription();
+  private randomTagNamesSubscription = new Subscription();
+  private takeFromServiceSubscription = new Subscription();
+  private loadWithTagSubscription = new Subscription();
 
   constructor(private photoService: PhotoService, private tagService: TagService) { }
 
@@ -27,12 +32,16 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.isTagExistSubscription.unsubscribe();
+    this.randomTagNamesSubscription.unsubscribe();
+    this.loadWithTagSubscription.unsubscribe();
+    this.takeFromServiceSubscription.unsubscribe();
   }
 
   search(tag: string) {
-    this.subscription.add(
-    this.tagService.isTagExists(tag).subscribe( isExist =>
+    this.isTagExistSubscription.unsubscribe();
+
+    this.isTagExistSubscription = this.tagService.isTagExists(tag).subscribe( isExist =>
     {
       if (isExist){
         this.loadWithTag(tag);
@@ -42,35 +51,38 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
         this.tag = "Wszystkie";
       }
     }
-    ));
+    );
   }
 
   loadWithTag(tag: string){
-    this.subscription.add(
-      this.tagService.getByName(tag).subscribe((tagFromDb: ITag) =>{
-        let idx = tagFromDb.id;
-        this.subscription.add(
-          this.photoService.takeWhereTag(idx, this.pageSize).subscribe(photos => {
-            this.photos = photos;
-            this.tag = tag;
-          })
-        )
-      })
-    )
+    this.loadWithTagSubscription.unsubscribe();
+
+    this.loadWithTagSubscription =
+    this.tagService.getByName(tag)
+      .pipe(
+        flatMap((tagFromDb: ITag) => this.photoService.takeWhereTag(tagFromDb.id, this.pageSize))
+      )
+      .subscribe(photos =>{
+        this.photos = photos;
+        this.tag = tag;
+    });
   }
 
   draw() {
-    this.subscription.add(
-      this.tagService.getRandomTagNames(this.recommendedSize).subscribe(tags =>{
+    this.randomTagNamesSubscription.unsubscribe();
+
+    this.randomTagNamesSubscription = this.tagService
+      .getRandomTagNames(this.recommendedSize).subscribe(tags =>{
         this.recommendedTags = tags;
-      })
-    )
+      });
   }
 
   loadFullList() {
-    this.subscription.add(
+    this.takeFromServiceSubscription.unsubscribe();
+
+    this.takeFromServiceSubscription =
       this.photoService.take(this.pageSize).subscribe(photos => {
         this.photos = photos;
-      }));
+      });
   }
 }

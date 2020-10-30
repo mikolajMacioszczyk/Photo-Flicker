@@ -8,6 +8,9 @@ namespace PhotoFlicker.Models.Dtos.Photo
     {
         [Required]
         public string Path { get; set; }
+        [Required] 
+        [MaxLength(50000)]
+        public string Description { get; set; }
         public IEnumerable<TagCreateDto> Tags { get; set; }
     }
 }

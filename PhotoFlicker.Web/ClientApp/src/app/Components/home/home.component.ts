@@ -14,16 +14,19 @@ export class HomeComponent implements OnDestroy{
   time: number = 30;
   message: string;
   withDescription: boolean = true;
-  private subscription = new Subscription();
   form = new FormGroup({
     searchTag: new FormControl('', [Validators.required, Validators.maxLength(50)])
   });
+
+  private subscription = new Subscription();
 
   constructor(private router: Router, private service: TagService) {
   }
 
   onSubmit(){
-    this.subscription.add(
+    this.subscription.unsubscribe();
+
+    this.subscription =
       this.service.isTagExists(this.tag).subscribe((isExist: boolean) => {
         if (isExist){
           this.router.navigate(['slider', this.tag, this.time*1000, this.withDescription ? 1 : 0]);
@@ -32,8 +35,7 @@ export class HomeComponent implements OnDestroy{
           this.message = "Nie mogę znaleźć tagu o nazwie \""+ this.tag+ "\"";
           this.tag = "";
         }
-      })
-    )
+      });
   }
 
   ngOnDestroy(): void {

@@ -278,6 +278,11 @@
                   <e p="all-photos.component.html" t="Include" />
                   <e p="all-photos.component.ts" t="Include" />
                 </e>
+                <e p="details-photo" t="Include">
+                  <e p="details-photo.component.css" t="Include" />
+                  <e p="details-photo.component.html" t="Include" />
+                  <e p="details-photo.component.ts" t="Include" />
+                </e>
                 <e p="home" t="Include">
                   <e p="home.component.css" t="Include" />
                   <e p="home.component.html" t="Include" />

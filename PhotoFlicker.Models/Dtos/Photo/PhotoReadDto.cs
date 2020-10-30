@@ -7,6 +7,7 @@ namespace PhotoFlicker.Models.Dtos.Photo
     {
         public int Id { get; set; }
         public string Path { get; set; }
+        public string Description { get; set; }
         public IEnumerable<TagReadDto> Tags { get; set; }
     }
 }

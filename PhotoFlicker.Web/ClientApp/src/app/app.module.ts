@@ -13,6 +13,7 @@ import {TagService} from "./Services/tag.service";
 
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HomeComponent} from "./Components/home/home.component";
@@ -25,6 +26,7 @@ import {PhotoSliderComponent} from "./Components/photo-slider/photo-slider.compo
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import { DetailsPhotoComponent } from './Components/details-photo/details-photo.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import {MatButtonModule} from "@angular/material/button";
     AllPhotosComponent,
     NewPhotoComponent,
     NewTagComponent,
+    DetailsPhotoComponent,
   ],
   imports: [
       BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
@@ -56,6 +59,7 @@ import {MatButtonModule} from "@angular/material/button";
       MatInputModule,
       MatCheckboxModule,
       MatButtonModule,
+      MatDialogModule
     ],
   providers: [PhotoService, TagService],
   bootstrap: [AppComponent]
