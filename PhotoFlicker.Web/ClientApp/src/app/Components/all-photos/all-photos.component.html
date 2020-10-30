@@ -5,8 +5,8 @@
 <h1> Polecane tagi</h1>
 <div class="d-flex justify-content-around mt-2 mb-4">
   <div class="tag-selector" *ngFor="let recommended of recommendedTags"
-    (click)="loadWithTag(recommended.name)">
-    {{recommended.name}}<div class="circle"></div>
+    (click)="loadWithTag(recommended)">
+    {{recommended}}<div class="circle"></div>
   </div>
 </div>
 

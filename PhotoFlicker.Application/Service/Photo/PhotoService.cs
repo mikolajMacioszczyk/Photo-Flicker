@@ -68,11 +68,16 @@ namespace PhotoFlicker.Application.Service.Photo
             return _mapper.Map<PhotoReadDto>(await _repository.GetById(id));
         }
 
-        public async Task<bool> Create(PhotoCreateDto created)
+        public async Task<bool> Create(UrlAndAndTagNamesViewModel created)
         {
             if (created == null) { throw new ArgumentException("Created item cannot be null"); }
 
-            return await _repository.Create(_mapper.Map<Models.Models.Photo>(created));
+            var splittedTagNames = created.Text.Split('#')
+                .Where(s => !string.IsNullOrEmpty(s))
+                .Select(s => s.Trim())
+                .Distinct(StringComparer.CurrentCultureIgnoreCase);
+
+            return await _repository.Create(created.Url, splittedTagNames);
         }
 
         public async Task<bool> UpdatePath(int id, string newPath)

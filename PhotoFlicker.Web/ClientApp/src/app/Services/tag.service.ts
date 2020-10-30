@@ -18,8 +18,8 @@ export class TagService {
     return this.http.get<Tag>(this.baseUrl+amount);
   }
 
-  getRandom(amount: number): Observable<any>{
-    return this.http.get<Tag>(this.baseUrl+"random/"+amount);
+  getRandomTagNames(amount: number): Observable<any>{
+    return this.http.get<Tag>(this.baseUrl+"randomNames/"+amount);
   }
 
   takeWherePhoto(photoId: number, amount: number): Observable<any>{

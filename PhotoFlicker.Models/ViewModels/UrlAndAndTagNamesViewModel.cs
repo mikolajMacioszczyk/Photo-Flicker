@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PhotoFlicker.Models.ViewModels
 {
-    public class UrlAndPlanTextViewModel
+    public class UrlAndAndTagNamesViewModel
     {
         [Required]
         public string Url { get; set; }

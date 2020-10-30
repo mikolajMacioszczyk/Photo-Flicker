@@ -68,7 +68,7 @@
         </e>
         <e p="ViewModels" t="Include">
           <e p="TextViewModel.cs" t="Include" />
-          <e p="UrlAndPlanTextViewModel.cs" t="Include" />
+          <e p="UrlAndAndTagNamesViewModel.cs" t="Include" />
           <e p="ValidInfoAndNoValidValues.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -87,7 +87,6 @@
           <e p="PhotoRepository" t="Include">
             <e p="AddTagSuccessfully.cs" t="Include" />
             <e p="AddTagWithoutModify.cs" t="Include" />
-            <e p="Create.cs" t="Include" />
             <e p="Delete.cs" t="Include" />
             <e p="FilterByExistenceTests.cs" t="Include" />
             <e p="Read.cs" t="Include" />

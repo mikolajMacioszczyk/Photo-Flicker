@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PhotoFlicker.Application.Repository.Tag;
 using PhotoFlicker.Application.Service.Tag;
 using PhotoFlicker.Models.Dtos.Tag;
-using PhotoFlicker.Models.Models;
 
 namespace PhotoFlicker.Web.Controllers
 {
@@ -36,6 +34,16 @@ namespace PhotoFlicker.Web.Controllers
             if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być ujemna"); }
 
             var data = await _service.GetRandom(amount);
+            return Ok(data);
+        }
+        
+        [HttpGet]
+        [Route("randomNames/{amount}")]
+        public async Task<ActionResult<IEnumerable<string>>> TakeRandomTagNames([FromRoute] int amount)
+        {
+            if (amount < 0) { return BadRequest("Ilość pobranych elementów nie może być ujemna"); }
+
+            var data = await _service.GetRandomTagNames(amount);
             return Ok(data);
         }
         

@@ -67,12 +67,23 @@ namespace PhotoFlicker.Web.Controllers
             return Ok(result);
         }
 
-        // [HttpPost]
-        // [Route("create")]
-        // public async Task<ActionResult<bool>> Create([FromBody] UrlAndPlanTextViewModel created)
-        // {
-        //     
-        // }
+        [HttpPost]
+        [Route("create")]
+        public async Task<ActionResult<bool>> Create([FromBody] UrlAndAndTagNamesViewModel created)
+        {
+            if (created == null)
+            {
+                return BadRequest("Object to create cannot be null");
+            }
+
+            if (await _service.Create(created))
+            {
+                await _service.SaveChanges();
+                return Ok(true);
+            }
+
+            return BadRequest("Cannot create");
+        }
 
     }
 }

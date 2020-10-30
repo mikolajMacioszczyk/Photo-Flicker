@@ -2,3 +2,13 @@
   color: teal;
   margin: 35px 0;
 }
+
+.non-exist-alert{
+  background: rgba(255, 102, 102,0.08);
+}
+
+li{
+  list-style: none;
+  margin: 7px;
+  padding: 0 10px;
+}

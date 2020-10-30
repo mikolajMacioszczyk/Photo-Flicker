@@ -8,6 +8,7 @@ namespace PhotoFlicker.Application.Service.Tag
     {
         Task<IEnumerable<TagReadDto>> Take(int amount);
         Task<IEnumerable<TagReadDto>> GetRandom(int amount);
+        Task<IEnumerable<string>> GetRandomTagNames(int amount);
         Task<TagReadDto> GetById(int id);
         Task<TagReadDto> GetByNameLike(string name);
 

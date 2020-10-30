@@ -14,7 +14,7 @@ namespace PhotoFlicker.Application.Service.Photo
         Task<IEnumerable<PhotoReadDto>> TakeRandomWithTag(int amount, int tagId);
         Task<IEnumerable<PhotoReadDto>> TakeWithTagLike(string pattern, int amount);
         Task<PhotoReadDto> GetById(int id);
-        Task<bool> Create(PhotoCreateDto created);
+        Task<bool> Create(UrlAndAndTagNamesViewModel created);
         Task<bool> UpdatePath(int id, string newPath);
         Task<bool> Delete(int id);
         Task<bool> AddTagToPhoto(int photoId, int tagId);

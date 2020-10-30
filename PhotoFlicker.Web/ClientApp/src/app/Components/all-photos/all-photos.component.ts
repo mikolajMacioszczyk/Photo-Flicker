@@ -12,7 +12,7 @@ import {ITag} from "../../Models/Tag";
 })
 export class AllPhotosComponent implements OnInit, OnDestroy {
   photos: IPhoto[];
-  recommendedTags: ITag[];
+  recommendedTags: string[];
   message: string;
   tag = "Wszystkie:";
   private subscription = new Subscription();
@@ -27,10 +27,7 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
       this.photos = photos;
     }));
     this.subscription.add(
-      this.tagService.getRandom(this.recommendedSize).subscribe(tags =>{
-        if (tags.length == 0){
-          console.log("Before OK")
-        }
+      this.tagService.getRandomTagNames(this.recommendedSize).subscribe(tags =>{
         this.recommendedTags = tags;
       })
     )

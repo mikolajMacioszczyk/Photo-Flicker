@@ -29,8 +29,51 @@ namespace PhotoFlicker.Application.Repository.Tag
             if (amount < 0) { amount = 0;}
 
             if (amount > await _db.TagItems.CountAsync()) { return await _db.TagItems.ToListAsync(); }
+
+            var wholeList = await _db.TagItems.ToListAsync();
+
+            return await GenerateRandomList(amount, wholeList);
+        }
+
+        public async Task<IEnumerable<string>> GetRandomTagNames(int amount)
+        {
+            if (amount < 0) { amount = 0;}
+
+            if (amount > await _db.TagItems.CountAsync()) { return await _db.TagItems.Select(t => t.Name).ToListAsync(); }
             
-            return await _db.TagItems.OrderBy(t => Guid.NewGuid()).Take(amount).ToListAsync();
+            var wholeList = await _db.TagItems.Select(t => t.Name).ToListAsync();
+
+            return await GenerateRandomList<string>(amount, wholeList);
+        }
+
+        private async Task<List<T>> GenerateRandomList<T>(int amount, List<T> fromList)
+        {
+            List<int> indexes = await GetRandomSortedIndexes(amount, fromList.Count);
+
+            var output = new List<T>();
+            foreach (var index in indexes)
+            {
+                output.Add(fromList[index]);
+            }
+            return output;
+        }
+
+        private async Task<List<int>> GetRandomSortedIndexes(int amount, int maxIdx)
+        {
+            List<int> output = new List<int>(amount);
+            for (int i = 0; i < amount; i++)
+            {
+                var idx = _random.Next(maxIdx);
+                if (output.Contains(idx))
+                {
+                    i--;
+                }
+                else
+                {
+                    output.Add(idx);
+                }
+            }
+            return output.OrderBy(i => i).ToList();
         }
 
         public async Task<Models.Models.Tag> GetById(int id)

@@ -15,14 +15,14 @@
   </div>
 
   <div class="row mt-4">
-    <div class="col-4">
+    <div class="col-5">
       <div *ngIf="photoUrl.valid">
         <p class="d-flex justify-content-center" >Czy to jest zdjęcie, które chcesz dodać?</p>
         <img [src]="url" class="w-100" alt="">
       </div>
     </div>
 
-    <div class="col-7 offset-1">
+    <div class="col-6 offset-1">
       <label for="tagsTextArea">
         <p>Wpisz tagi, jakie chcesz dodać do zdjęcia. Tag powinien zaczynać się od znaku #</p>
       </label>
@@ -37,6 +37,21 @@
                   cdkAutosizeMaxRows="10"
         ></textarea>
       </mat-form-field>
+
+      <div *ngIf="invalidTags.length > 0">
+        <p>Podane przez ciebie tagi nie istnieją. Możesz je dodać lub usunąć z twojego zdjęcia</p>
+        <ul>
+          <li *ngFor="let tagName of invalidTags" class="non-exist-alert">
+            <div class="d-flex justify-content-between">
+              {{tagName}}
+              <div>
+                <button class="mx-3 btn btn-success" (click)="addTag(tagName)">Dodaj</button>
+                <button class="btn btn-danger" (click)="removeFromTagText(tagName)">Usuń</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

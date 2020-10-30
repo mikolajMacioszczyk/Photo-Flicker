@@ -7,6 +7,7 @@ namespace PhotoFlicker.Application.Repository.Tag
     {
         Task<IEnumerable<Models.Models.Tag>> Take(int amount);
         Task<IEnumerable<Models.Models.Tag>> GetRandom(int amount);
+        Task<IEnumerable<string>> GetRandomTagNames(int amount);
         Task<Models.Models.Tag> GetById(int id);
         Task<Models.Models.Tag> GetByNameLike(string name);
         Task<bool> Create(Models.Models.Tag created);

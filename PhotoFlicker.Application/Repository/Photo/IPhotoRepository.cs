@@ -12,7 +12,7 @@ namespace PhotoFlicker.Application.Repository.Photo
         Task<IEnumerable<Models.Models.Photo>> TakeRandomWithTag(int amount, int tagId);
         Task<IEnumerable<Models.Models.Photo>> TakeWithTagLike(string pattern, int amount);
         Task<Models.Models.Photo> GetById(int id);
-        Task<bool> Create(Models.Models.Photo created);
+        Task<bool> Create(string url, IEnumerable<string> tagNames);
         Task<bool> UpdatePath(int id, string newPath);
         Task<bool> Delete(int id);
         Task<bool> AddTagToPhoto(int photoId, int tagId);

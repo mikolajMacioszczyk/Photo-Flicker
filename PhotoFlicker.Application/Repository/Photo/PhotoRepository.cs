@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper.Configuration.Conventions;
 using Microsoft.EntityFrameworkCore;
 using PhotoFlicker.Application.Context;
 
@@ -76,17 +74,20 @@ namespace PhotoFlicker.Application.Repository.Photo
             return await _db.PhotoItems.FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<bool> Create(Models.Models.Photo created)
+        public async Task<bool> Create(string url, IEnumerable<string> tagNames)
         {
-            if (created == null) {return false;}
-
-            if ((await _db.PhotoItems.FirstOrDefaultAsync(p => p.Id == created.Id)) != null) { return false; }
+            var photo = new Models.Models.Photo(){Path = url};
             
-            if (created.Tags != null)
+            
+            await _db.PhotoItems.AddAsync(photo);
+
+            var tags = new List<Models.Models.Tag>();
+            foreach (var name in tagNames.Select(t => t.ToLower()))
             {
-                created.Tags = null;
+                tags.Add(await _db.TagItems.FirstAsync(t => t.Name.ToLower().Equals(name)));
             }
-            await _db.AddRangeAsync(created);
+            photo.Tags = tags;
+
             return true;
         }
 

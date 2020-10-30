@@ -30,6 +30,12 @@ namespace PhotoFlicker.Application.Service.Tag
             return _mapper.Map<IEnumerable<TagReadDto>>(await _repository.GetRandom(amount));
         }
 
+        public async Task<IEnumerable<string>> GetRandomTagNames(int amount)
+        {
+            ValidateAmount(amount);
+            return await _repository.GetRandomTagNames(amount);
+        }
+
         public async Task<TagReadDto> GetById(int id)
         {
             return _mapper.Map<TagReadDto>(await _repository.GetById(id));

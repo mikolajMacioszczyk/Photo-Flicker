@@ -23,6 +23,7 @@ import {NotFoundComponent} from "./Components/not-found/not-found.component";
 import {PhotoSliderComponent} from "./Components/photo-slider/photo-slider.component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -35,24 +36,25 @@ import {MatInputModule} from "@angular/material/input";
     NewPhotoComponent,
     NewTagComponent,
   ],
-  imports: [
-    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: 'slider/:tag/:time', component: PhotoSliderComponent},
-      {path: 'photos', component: AllPhotosComponent},
-      {path: 'photos/new', component: NewPhotoComponent},
-      {path: 'tags/new', component: NewTagComponent},
-      {path: '**', component: NotFoundComponent},
-    ]),
-    BrowserAnimationsModule,
-    TextFieldModule,
-    MatFormFieldModule,
-    MatInputModule
-  ],
+    imports: [
+        BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot([
+            {path: '', component: HomeComponent},
+            {path: 'slider/:tag/:time', component: PhotoSliderComponent},
+            {path: 'photos', component: AllPhotosComponent},
+            {path: 'photos/new', component: NewPhotoComponent},
+            {path: 'tags/new', component: NewTagComponent},
+            {path: '**', component: NotFoundComponent},
+        ]),
+        BrowserAnimationsModule,
+        TextFieldModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule
+    ],
   providers: [PhotoService, TagService],
   bootstrap: [AppComponent]
 })
