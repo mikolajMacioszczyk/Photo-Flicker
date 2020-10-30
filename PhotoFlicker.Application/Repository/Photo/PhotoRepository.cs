@@ -156,6 +156,22 @@ namespace PhotoFlicker.Application.Repository.Photo
             return tag != null;
         }
 
+        public async Task<string[]> FilterByExistence(IEnumerable<string> tags)
+        {
+            if (tags == null)
+            {
+                return new string[]{};
+            }
+
+            var lowerTags = tags.Where(t => !string.IsNullOrEmpty(t)).Select(t => t.ToLower());
+
+            var filteredFromDb = await _db.TagItems.Select(t => t.Name.ToLower())
+                .Where(t => lowerTags.Contains(t))
+                .ToListAsync();
+
+            return filteredFromDb.ToArray();
+        }
+
         public async Task SaveChanges()
         {
             await _db.SaveChangesAsync();

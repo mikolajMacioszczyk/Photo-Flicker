@@ -19,6 +19,7 @@ namespace PhotoFlicker.Application.Service.Photo
         Task<bool> AddTagToPhoto(int photoId, int tagId);
         Task<bool> RemoveTagFromPhoto(int photoId, int tagId);
         Task<bool> IsTagExist(int tagId);
+        Task<(bool, string[])> ValidateTasksAsPlainText(string text);
         Task SaveChanges();
     }
 }

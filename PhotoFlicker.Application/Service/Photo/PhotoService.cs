@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using AutoMapper.QueryableExtensions.Impl;
 using PhotoFlicker.Application.Repository.Photo;
 using PhotoFlicker.Models.Dtos.Photo;
 
@@ -99,6 +99,32 @@ namespace PhotoFlicker.Application.Service.Photo
         public async Task<bool> IsTagExist(int tagId)
         {
             return await _repository.IsTagExist(tagId);
+        }
+
+        public async Task<(bool, string[])> ValidateTasksAsPlainText(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return (true, new string[]{ });
+            }
+            
+            var splitted = text.Split('#')
+                .Select(s => s.Trim())
+                .Where(s => !string.IsNullOrEmpty(s))
+                .Distinct().ToList();
+            
+            var existedInDb = await _repository.FilterByExistence(splitted);
+            foreach (var lowerCaseTagName in existedInDb)
+            {
+                var originalTagName = splitted.First(s => s.ToLower().Equals(lowerCaseTagName));
+                splitted.Remove(originalTagName);
+            }
+
+            if (splitted.Count > 0)
+            {
+                return (false, splitted.ToArray());
+            }
+            return (true, new string[] { });
         }
 
         public async Task SaveChanges()

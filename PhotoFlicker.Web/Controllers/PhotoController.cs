@@ -1,13 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PhotoFlicker.Application.Repository.Photo;
 using PhotoFlicker.Application.Service.Photo;
-using PhotoFlicker.Models;
 using PhotoFlicker.Models.Dtos.Photo;
 using PhotoFlicker.Models.Dtos.Tag;
-using PhotoFlicker.Models.Models;
 
 namespace PhotoFlicker.Web.Controllers
 {
@@ -60,6 +56,18 @@ namespace PhotoFlicker.Web.Controllers
             }
             
             return Ok(data);
+        }
+
+        [HttpPost]
+        [Route("validate")]
+        public async Task<ActionResult<(bool, string[])>> ValidateTagsAsPlainText([FromBody] string text)
+        {
+            var result = _service.ValidateTasksAsPlainText(text);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            return Problem();
         }
 
     }

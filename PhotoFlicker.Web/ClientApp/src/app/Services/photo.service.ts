@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IPhoto} from "../Models/Photo";
-import {IUrlAndString} from "../Models/UrlAndString";
+import {UrlAndTagsAsPlainText} from "../Models/UrlAndString";
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,11 @@ export class PhotoService {
     return this.http.get<IPhoto>(this.baseUrl+tagId+"/"+amount);
   }
 
-  createPhoto(created: IUrlAndString): Observable<any>{
+  validateTagsAsPlainText(text: string): Observable<any>{
+    return this.http.post<any>(this.baseUrl+"validate", text);
+  }
+
+  createPhoto(created: UrlAndTagsAsPlainText): Observable<any>{
     return this.http.post<IPhoto>(this.baseUrl+"create", created);
   }
 }

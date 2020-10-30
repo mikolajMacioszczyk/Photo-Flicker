@@ -1,4 +1,20 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=32ed24cd_002D54e4_002D40c1_002Dbb7e_002D486ce92f7bc5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Take_NegativeArgument_ShouldReturnEmptyCollection" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFolder&gt;3DA575D9-C807-40B7-8849-6D847552F699/d:RepositoryUnitTests&lt;/ProjectFolder&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=013a8b97_002Dbd00_002D41eb_002Da09b_002Dd0432c187310/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ValidateTasksAsPlainText_OnlyExistingTags_ShouldReturnTrue_ShouldReturnFullCollection" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::3DA575D9-C807-40B7-8849-6D847552F699::.NETCoreApp,Version=v3.1::PhotoFlicker.Tests.ServiceUnitTests.Photo.ValidateTasksAsPlainTextTests.ValidateTasksAsPlainText_OnlyExistingTags_ShouldReturnTrue_ShouldReturnFullCollection&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=32ed24cd_002D54e4_002D40c1_002Dbb7e_002D486ce92f7bc5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Take_NegativeArgument_ShouldReturnEmptyCollection" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;ProjectFolder&gt;3DA575D9-C807-40B7-8849-6D847552F699/d:RepositoryUnitTests&lt;/ProjectFolder&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::3DA575D9-C807-40B7-8849-6D847552F699::.NETCoreApp,Version=v3.1::PhotoFlicker.Tests.ServiceUnitTests.Photo.ValidateTasksAsPlainTextTests&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d5798b77_002D3bad_002D4def_002Dac40_002D05939225950a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ValidateTasksAsPlainText_OnlyExistingTags_ShouldReturnTrue_ShouldReturnFullCollection #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mikolaj/RiderProjects/Photo-Flicker/PhotoFlicker.Tests" Presentation="&amp;lt;PhotoFlicker.Tests&amp;gt;" /&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6002b86_002D5849_002D4d35_002Da757_002Dfbb2d3e39bd0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="FilterByExistence_EveryNameInDb_ShouldReturnTheSameCollection" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/mikolaj/RiderProjects/Photo-Flicker/PhotoFlicker.Tests" Presentation="&amp;lt;PhotoFlicker.Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
