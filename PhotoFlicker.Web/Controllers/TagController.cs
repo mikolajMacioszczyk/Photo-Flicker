@@ -98,5 +98,12 @@ namespace PhotoFlicker.Web.Controllers
 
             return BadRequest("Error");
         }
+
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public async Task<ActionResult<bool>> Delete([FromRoute] int id)
+        {
+            return Ok(true);
+        }
     }
 }

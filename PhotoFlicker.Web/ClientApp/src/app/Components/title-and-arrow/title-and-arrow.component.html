@@ -1,0 +1,14 @@
+<div class="p-2 d-flex justify-content-between">
+  <div class="text-medium">
+    #{{tag.name}}
+  </div>
+
+  <div class="drop-menu dropdown">
+    <span class="clickable"><mat-icon class="dropdown-source">chevron_right</mat-icon></span>
+    <div class="dropdown-content">
+      <a (click)="emitEmit()">Zmień</a>
+      <a (click)="deleteEmit()">Usuń</a>
+      <a (click)="showImagesEmit()">Zdjęcia</a>
+    </div>
+  </div>
+</div>

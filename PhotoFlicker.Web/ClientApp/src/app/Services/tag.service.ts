@@ -41,4 +41,8 @@ export class TagService {
   createTag(tag: ITag): Observable<any>{
     return this.http.post(this.baseUrl+"create", tag);
   }
+
+  deleteTag(id: number): Observable<any>{
+    return this.http.delete(this.baseUrl+"delete/"+id);
+  }
 }

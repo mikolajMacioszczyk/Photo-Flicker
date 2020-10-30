@@ -313,6 +313,16 @@
                   <e p="photo-slider.component.html" t="Include" />
                   <e p="photo-slider.component.ts" t="Include" />
                 </e>
+                <e p="tag-list" t="Include">
+                  <e p="tag-list.component.css" t="Include" />
+                  <e p="tag-list.component.html" t="Include" />
+                  <e p="tag-list.component.ts" t="Include" />
+                </e>
+                <e p="title-and-arrow" t="Include">
+                  <e p="title-and-arrow.component.css" t="Include" />
+                  <e p="title-and-arrow.component.html" t="Include" />
+                  <e p="title-and-arrow.component.ts" t="Include" />
+                </e>
               </e>
               <e p="Models" t="Include">
                 <e p="Photo.ts" t="Include" />

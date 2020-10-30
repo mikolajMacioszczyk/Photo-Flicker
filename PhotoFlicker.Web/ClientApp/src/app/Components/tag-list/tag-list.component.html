@@ -1,0 +1,17 @@
+
+<p>Wpisane tagi: </p>
+
+<div class="row">
+  <div class="col-4">
+    <div *ngFor="let tag of firstHalf">
+      <app-title-and-arrow [tag]="tag" (delete)="deleteTag($event)"></app-title-and-arrow>
+    </div>
+  </div>
+
+  <div class="offset-3 col-4">
+    <div *ngFor="let tag of secondHalf">
+      <app-title-and-arrow [tag]="tag" (delete)="deleteTag($event)"></app-title-and-arrow>
+    </div>
+  </div>
+
+</div>

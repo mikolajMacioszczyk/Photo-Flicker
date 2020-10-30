@@ -27,6 +27,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import { DetailsPhotoComponent } from './Components/details-photo/details-photo.component';
+import { TagListComponent } from './Components/tag-list/tag-list.component';
+import {MatIconModule} from "@angular/material/icon";
+import { TitleAndArrowComponent } from './Components/title-and-arrow/title-and-arrow.component';
 
 @NgModule({
   declarations: [
@@ -39,28 +42,32 @@ import { DetailsPhotoComponent } from './Components/details-photo/details-photo.
     NewPhotoComponent,
     NewTagComponent,
     DetailsPhotoComponent,
+    TagListComponent,
+    TitleAndArrowComponent,
   ],
   imports: [
-      BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
-      HttpClientModule,
-      FormsModule,
-      ReactiveFormsModule,
-      RouterModule.forRoot([
-          {path: '', component: HomeComponent},
-          {path: 'slider/:tag/:time/:withDescription', component: PhotoSliderComponent},
-          {path: 'photos', component: AllPhotosComponent},
-          {path: 'photos/new', component: NewPhotoComponent},
-          {path: 'tags/new', component: NewTagComponent},
-          {path: '**', component: NotFoundComponent},
-      ]),
-      BrowserAnimationsModule,
-      TextFieldModule,
-      MatFormFieldModule,
-      MatInputModule,
-      MatCheckboxModule,
-      MatButtonModule,
-      MatDialogModule
-    ],
+    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'slider/:tag/:time/:withDescription', component: PhotoSliderComponent},
+      {path: 'photos', component: AllPhotosComponent},
+      {path: 'photos/new', component: NewPhotoComponent},
+      {path: 'tags/new', component: NewTagComponent},
+      {path: 'tags/all', component: TagListComponent},
+      {path: '**', component: NotFoundComponent},
+    ]),
+    BrowserAnimationsModule,
+    TextFieldModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule
+  ],
   providers: [PhotoService, TagService],
   entryComponents: [DetailsPhotoComponent],
   bootstrap: [AppComponent]
