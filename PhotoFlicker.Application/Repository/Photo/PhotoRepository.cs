@@ -37,7 +37,7 @@ namespace PhotoFlicker.Application.Repository.Photo
             var tag = await _db.TagItems.FirstOrDefaultAsync(t => t.Id == tagId);
             if (tag == null){ return new List<Models.Models.Photo>();}
             
-            return await _db.PhotoItems.Where(p => p.Tags.Contains(tag)).Take(amount).ToListAsync();
+            return await _db.PhotoItems.Include(p => p.Tags).Where(p => p.Tags.Contains(tag)).Take(amount).ToListAsync();
         }
 
         public async Task<IEnumerable<Models.Models.Photo>> TakeRandom(int amount)

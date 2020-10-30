@@ -1,1 +1,15 @@
-<p>details-photo works!</p>
+<mat-dialog-content>
+  <div class="card">
+    <img class="card-img-top" alt="" [src]="data.path">
+    <div class="d-flex">
+      <div class="card-title tag" *ngFor="let tag of data.tags">#{{tag.name}}</div>
+    </div>
+    <p class="card-text">
+      {{data.description}}
+    </p>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

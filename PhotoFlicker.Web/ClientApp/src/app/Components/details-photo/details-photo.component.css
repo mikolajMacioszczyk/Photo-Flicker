@@ -1,0 +1,14 @@
+.tag{
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+.card-text{
+  margin: 5px 20px;
+  font-size: 20px;
+}
+
+mat-dialog-content{
+  max-height: 850px;
+  max-width: 1250px;
+}

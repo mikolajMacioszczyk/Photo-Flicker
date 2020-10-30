@@ -5,6 +5,8 @@ import {Subscription} from "rxjs";
 import {TagService} from "../../Services/tag.service";
 import {ITag} from "../../Models/Tag";
 import {flatMap} from "rxjs/operators";
+import {MatDialog} from "@angular/material/dialog";
+import {DetailsPhotoComponent} from "../details-photo/details-photo.component";
 
 @Component({
   selector: 'app-all-photos',
@@ -24,7 +26,9 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
   private takeFromServiceSubscription = new Subscription();
   private loadWithTagSubscription = new Subscription();
 
-  constructor(private photoService: PhotoService, private tagService: TagService) { }
+  constructor(private photoService: PhotoService,
+              private tagService: TagService,
+              public dialog: MatDialog) { }
 
   ngOnInit() {
     this.loadFullList();
@@ -84,5 +88,9 @@ export class AllPhotosComponent implements OnInit, OnDestroy {
       this.photoService.take(this.pageSize).subscribe(photos => {
         this.photos = photos;
       });
+  }
+
+  openDialog(photo: IPhoto) {
+    this.dialog.open(DetailsPhotoComponent, {data: photo})
   }
 }

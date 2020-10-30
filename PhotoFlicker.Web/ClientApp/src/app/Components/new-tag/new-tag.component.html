@@ -1,18 +1,38 @@
-<form (ngSubmit)="submit()" [formGroup]="form">
-  <div class="d-flex">
-    <label for="name" class="text-muted big-font">#</label>
-    <input class="form-control big-font"
-           type="text" name="newTag"
-           [(ngModel)]="tagName"
-           id="name" formControlName="name">
-  </div>
-  <div class="text-danger" *ngIf="name.invalid && name.touched">
-    <div *ngIf="name.errors.required">Wpisz nazwę tagu</div>
-    <div *ngIf="!name.errors.required">Istnieje już tag o podanej nazwie</div>
+
+<div class="row">
+  <div class="col-7 margin-top-100">
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <div class="d-flex">
+        <label for="name" class="text-muted big-font">#</label>
+        <input class="form-control big-font"
+               type="text" name="newTag"
+               [(ngModel)]="tagName"
+               id="name" formControlName="name">
+      </div>
+      <div class="text-danger" *ngIf="name.invalid && name.touched">
+        <div *ngIf="name.errors.required">Wpisz nazwę tagu</div>
+        <div *ngIf="!name.errors.required">Istnieje już tag o podanej nazwie</div>
+      </div>
+
+      <div class="mt-5 d-flex justify-content-around">
+        <button type="submit" class="btn btn-success big-font px-3" [disabled]="form.invalid || form.pending">Dodaj</button>
+        <button type="button" class="btn btn-secondary big-font px-3" (click)="discard()">Anuluj</button>
+      </div>
+    </form>
   </div>
 
-  <div class="mt-5 d-flex justify-content-around">
-    <button type="submit" class="btn btn-success big-font px-5" [disabled]="form.invalid || form.pending">Dodaj</button>
-    <button type="button" class="btn btn-secondary big-font px-5" (click)="discard()">Anuluj</button>
+
+  <div class="offset-1 col-4 mt-5 p-3 background-green-muted">
+    <p class="text-center">Jaki Powinien być tag?</p>
+
+    <div class="row">
+      <ul class="offset-2 col-8">
+        <li>Krótki</li>
+        <li>Ciekawy</li>
+        <li>Wyrazisty</li>
+        <li>Ogólny</li>
+        <li>Samoopisujący</li>
+      </ul>
+    </div>
   </div>
-</form>
+</div>

@@ -62,6 +62,7 @@ import { DetailsPhotoComponent } from './Components/details-photo/details-photo.
       MatDialogModule
     ],
   providers: [PhotoService, TagService],
+  entryComponents: [DetailsPhotoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

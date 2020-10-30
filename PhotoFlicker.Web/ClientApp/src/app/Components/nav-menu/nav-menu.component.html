@@ -21,10 +21,17 @@
       >
         <ul class="navbar-nav flex-grow">
           <li class="nav-item">
-            <a class="nav-link text-dark" [routerLink]="['/photos']">Photos</a>
+            <a class="nav-link text-dark green-hoover" [routerLink]="['/photos/new']">New</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" [routerLink]="['/tags/new']">Tags</a>
+            <a class="nav-link text-dark green-hoover" [routerLink]="['/photos']">Photos</a>
+          </li>
+          <li class="nav-item drop-menu dropdown green-hoover">
+            <a class="nav-link text-dark dropdown-source">Tags</a>
+            <div class="dropdown-content bg-white">
+              <a [routerLink]="['/tags/new']">Dodaj</a>
+              <a [routerLink]="['/tags/new']">Wszystkie</a>
+            </div>
           </li>
         </ul>
       </div>

@@ -14,7 +14,7 @@ import {ITag} from "../../Models/Tag";
   styleUrls: ['./new-photo.component.css']
 })
 export class NewPhotoComponent implements OnDestroy {
-  url: string;
+  url: string = "https://images2.minutemediacdn.com/image/upload/c_crop,h_1192,w_2121,x_0,y_111/f_auto,q_auto,w_1100/v1554702761/shape/mentalfloss/573469.istock-663874486.jpg";
   tagsText: string;
   invalidTags: string[] = [];
   form = new FormGroup({
